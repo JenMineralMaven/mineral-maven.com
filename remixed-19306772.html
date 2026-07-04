@@ -1,0 +1,1199 @@
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 18px;max-width:520px;margin:0 auto 32px;font-size:12px;color:rgba(250,245,238,.6);line-height:1.7;text-align:left;">
+      <strong style="color:rgba(250,245,238,.85);">What to expect:</strong> Most clients notice meaningful improvements in energy, mood, and hair within 8–12 weeks. Mineral restoration is a gradual process — no single supplement or protocol resolves everything at once. Your results will depend on your starting point, consistency, and individual health picture. This program gives you a precise, data-driven foundation — not a quick fix.
+    </div><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mineral Maven · Jenifer Allen</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --clay:#C4856A;--clay-lt:#F2D4C8;--clay-dk:#a06852;--clay-dkr:#7a4e3c;
+  --sage:#8FAF8C;--sage-lt:#e8f2e7;--sage-dk:#5d8c5a;--sage-dkr:#3d6e3a;
+  --gold:#C9A96E;--gold-lt:#f5ead8;
+  --cream:#FAF5EE;--ink:#3D3530;--ink-md:#5e5048;--ink-lt:#9a8a7a;
+  --white:#ffffff;--border:#e8d8c8;
+  --font-display:'Lora',serif;--font-body:'Quicksand',sans-serif;
+  --section-pad:96px;--nav-h:72px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--cream);color:var(--ink);line-height:1.75;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;font-family:var(--font-body);}
+.container{max-width:1100px;margin:0 auto;padding:0 28px;}
+.container--sm{max-width:720px;margin:0 auto;padding:0 28px;}
+.u-center{text-align:center;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes bounceIn{0%{transform:scale(.7);opacity:0}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-h);background:rgba(250,245,238,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;align-items:center;}
+.nav.scrolled{box-shadow:0 4px 24px rgba(196,133,106,.1);}
+.nav-inner{width:100%;max-width:1100px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
+.nav-logo-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#F2D4C8,#C4856A);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.nav-logo-text{font-family:var(--font-display);font-size:18px;font-weight:600;color:#7a4e3c;}
+.nav-logo-sub{display:block;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#9a8a7a;line-height:1;}
+.nav-hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:pointer;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#C4856A;border-radius:2px;}
+.nav-mobile{position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(250,245,238,.98);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:999;overflow:hidden;max-height:0;transition:max-height .35s ease,padding .35s ease;display:flex;flex-direction:column;gap:4px;}
+.nav-mobile.open{max-height:600px;padding:20px 28px 28px;}
+.nav-mobile a{font-size:15px;font-weight:600;color:#5e5048;padding:12px 16px;border-radius:10px;cursor:pointer;display:block;}
+.nav-mobile a:hover{background:#F2D4C8;color:#C4856A;}
+.nav-mobile .quiz-link{background:linear-gradient(135deg,#C4856A,#a06852);color:white!important;border-radius:10px;text-align:center;margin-top:8px;}
+
+/* PAGES */
+.page{display:none;padding-top:var(--nav-h);min-height:100vh;}
+.page.active{display:block;}
+
+/* SHARED */
+.section-eyebrow{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#a06852;background:#F2D4C8;padding:5px 16px;border-radius:30px;margin-bottom:18px;}
+.section-title{font-family:var(--font-display);font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.2;color:#3D3530;margin-bottom:14px;}
+.section-title em{font-style:italic;color:#C4856A;}
+.section-lead{font-size:16px;color:#5e5048;max-width:580px;line-height:1.8;}
+.section-lead.center{margin:0 auto;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:15px;font-weight:700;color:white;background:linear-gradient(135deg,#C4856A,#a06852);padding:16px 36px;border-radius:50px;border:none;box-shadow:0 6px 24px rgba(196,133,106,.3);transition:transform .2s,box-shadow .2s;cursor:pointer;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(196,133,106,.42);}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:14px;font-weight:700;color:#a06852;background:white;border:1.5px solid #F2D4C8;padding:13px 28px;border-radius:50px;transition:all .2s;cursor:pointer;}
+.btn-secondary:hover{background:#F2D4C8;border-color:#C4856A;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:48px;}
+.feature-card{background:white;border-radius:18px;padding:28px;border:1px solid #e8d8c8;transition:transform .25s,box-shadow .25s;}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(196,133,106,.12);}
+.feature-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;}
+.feature-card h3{font-family:var(--font-display);font-size:18px;font-weight:600;color:#3D3530;margin-bottom:8px;}
+.feature-card p{font-size:13.5px;color:#5e5048;line-height:1.7;}
+.testis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px;}
+.testi-card{background:white;border-radius:16px;padding:28px;border:1px solid #e8d8c8;}
+.testi-stars{color:#C9A96E;margin-bottom:12px;font-size:15px;}
+.testi-text{font-size:14px;color:#5e5048;line-height:1.75;font-style:italic;margin-bottom:18px;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#F2D4C8,#C4856A);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:15px;}
+.testi-name{font-weight:700;font-size:13.5px;color:#3D3530;}
+.testi-detail{font-size:11.5px;color:#9a8a7a;}
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:36px;}
+@media(max-width:700px){.ig-grid{grid-template-columns:repeat(3,1fr);}}
+.ig-tile{aspect-ratio:1;border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.ig-tile-inner{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+.ig-tile-emoji{font-size:32px;}
+.ig-tile-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:white;}
+.cred-pill{background:white;border:1px solid #e8d8c8;font-size:12px;font-weight:600;color:#5e5048;padding:7px 16px;border-radius:20px;display:inline-flex;align-items:center;gap:6px;margin:4px;}
+.pain-grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;}
+.pain-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:24px 22px;}
+.pain-emoji{font-size:24px;margin-bottom:10px;}
+.pain-card h4{font-size:14px;font-weight:700;color:rgba(250,245,238,.88);margin-bottom:5px;}
+.pain-card p{font-size:12.5px;color:rgba(250,245,238,.4);line-height:1.6;}
+.delivers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px;}
+.deliver-card{background:white;border-radius:18px;padding:28px;border:1px solid #e8d8c8;transition:transform .25s,box-shadow .25s;}
+.deliver-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(196,133,106,.12);}
+.deliver-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.deliver-card h3{font-family:var(--font-display);font-size:17px;color:#3D3530;margin-bottom:8px;}
+.deliver-card p{font-size:13px;color:#5e5048;line-height:1.7;}
+.deliver-tag{display:inline-block;margin-top:12px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C9A96E;background:rgba(201,169,110,.15);padding:3px 12px;border-radius:20px;}
+.timeline-list{max-width:700px;margin:48px auto 0;display:flex;flex-direction:column;position:relative;}
+.timeline-list::before{content:'';position:absolute;left:24px;top:28px;bottom:28px;width:2px;background:linear-gradient(to bottom,#F2D4C8,#C9A96E,#8FAF8C);}
+.tl-row{display:flex;gap:28px;align-items:flex-start;padding:0 0 36px 0;}
+.tl-dot{width:48px;height:48px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:700;color:white;position:relative;z-index:1;}
+.tl-body{flex:1;padding-top:10px;}
+.tl-body h3{font-family:var(--font-display);font-size:18px;color:#3D3530;margin-bottom:6px;}
+.tl-body p{font-size:13.5px;color:#5e5048;line-height:1.7;}
+.tl-wk{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9a8a7a;margin-bottom:4px;}
+.price-box{background:white;border-radius:24px;padding:48px 40px;max-width:520px;margin:0 auto;box-shadow:0 20px 60px rgba(0,0,0,.22);position:relative;overflow:hidden;z-index:1;}
+.price-box::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#F2D4C8,#C9A96E,#8FAF8C);}
+.price-box-badge{display:inline-block;margin-bottom:18px;background:linear-gradient(135deg,#C4856A,#a06852);color:white;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:30px;}
+.price-box h3{font-family:var(--font-display);font-size:22px;color:#3D3530;margin-bottom:8px;}
+.price-box-tagline{font-size:14px;color:#9a8a7a;margin-bottom:28px;}
+.price-num{font-family:var(--font-display);font-size:clamp(52px,10vw,72px);font-weight:700;color:#C4856A;line-height:1;margin-bottom:4px;}
+.price-num sup{font-size:.4em;vertical-align:super;}
+.price-or{color:#9a8a7a;font-size:13px;margin:8px 0;}
+.price-plan{font-size:16px;font-weight:700;color:#C4856A;margin-bottom:28px;}
+.incl-list{list-style:none;text-align:left;margin-bottom:32px;}
+.incl-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #F2D4C8;font-size:14px;color:#5e5048;}
+.incl-item:last-child{border-bottom:none;}
+.incl-check{width:20px;height:20px;border-radius:50%;background:#e8f2e7;color:#5d8c5a;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;margin-top:2px;}
+.price-cta{width:100%;padding:18px;border-radius:50px;border:none;background:linear-gradient(135deg,#C4856A,#a06852);color:white;font-family:var(--font-body);font-size:17px;font-weight:700;cursor:pointer;margin-bottom:12px;}
+.price-note{font-size:12px;color:#9a8a7a;}
+.faq-wrap{max-width:680px;margin:40px auto 0;}
+.faq-q-btn{width:100%;background:none;border:none;border-bottom:1px solid #e8d8c8;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;text-align:left;font-family:var(--font-body);font-size:15px;font-weight:700;color:#3D3530;cursor:pointer;}
+.faq-icon-btn{width:26px;height:26px;border-radius:50%;background:rgba(196,133,106,.15);color:#C4856A;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:transform .3s;line-height:1;}
+.faq-ans{max-height:0;overflow:hidden;font-size:14px;color:#5e5048;line-height:1.75;transition:max-height .4s ease,padding .3s;}
+.faq-item.open .faq-icon-btn{transform:rotate(45deg);}
+.faq-item.open .faq-ans{max-height:250px;padding-bottom:18px;}
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;padding:24px 28px 48px;max-width:1100px;margin:0 auto;}
+.resource-card{background:white;border-radius:20px;border:1px solid #e8d8c8;overflow:hidden;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;}
+.resource-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(196,133,106,.12);}
+.resource-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:56px;}
+.resource-body{padding:22px;display:flex;flex-direction:column;flex:1;}
+.resource-tag{display:inline-block;margin-bottom:8px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:20px;}
+.resource-card h3{font-family:var(--font-display);font-size:18px;color:#3D3530;margin-bottom:8px;line-height:1.35;}
+.resource-card p{font-size:13px;color:#5e5048;line-height:1.65;margin-bottom:16px;}
+.resource-dl{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:9px 18px;border-radius:30px;border:none;cursor:pointer;font-family:var(--font-body);}
+.resources-capture{background:linear-gradient(135deg,#e8f2e7,#F2D4C8);border-radius:24px;padding:52px;text-align:center;margin:0 28px 48px;border:1px solid #e8d8c8;}
+.resources-capture h2{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);color:#3D3530;margin-bottom:10px;}
+.capture-form{display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center;}
+.capture-input{flex:1;min-width:200px;font-family:var(--font-body);font-size:14px;border:1.5px solid #e8d8c8;border-radius:50px;padding:13px 22px;outline:none;background:white;}
+.capture-btn{font-family:var(--font-body);font-size:14px;font-weight:700;background:linear-gradient(135deg,#C4856A,#a06852);color:white;border:none;border-radius:50px;padding:13px 26px;cursor:pointer;}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;padding:var(--section-pad) 28px;max-width:1000px;margin:0 auto;}
+@media(max-width:680px){.contact-layout{grid-template-columns:1fr;}}
+.contact-form-wrap{background:white;border-radius:22px;padding:36px;border:1px solid #e8d8c8;}
+.contact-form-wrap h3{font-family:var(--font-display);font-size:22px;color:#3D3530;margin-bottom:24px;}
+.form-group{margin-bottom:18px;}
+.form-label{display:block;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#5e5048;margin-bottom:7px;}
+.form-input,.form-select,.form-textarea{width:100%;font-family:var(--font-body);font-size:14px;border:1.5px solid #e8d8c8;border-radius:12px;padding:12px 16px;outline:none;background:#FAF5EE;color:#3D3530;}
+.form-textarea{resize:vertical;min-height:110px;}
+.form-submit{width:100%;font-family:var(--font-body);font-size:15px;font-weight:700;background:linear-gradient(135deg,#C4856A,#a06852);color:white;border:none;border-radius:50px;padding:16px;cursor:pointer;}
+.contact-method{display:flex;align-items:center;gap:14px;background:white;border:1px solid #e8d8c8;border-radius:14px;padding:16px 18px;margin-bottom:14px;}
+.cm-icon{width:42px;height:42px;border-radius:10px;background:#F2D4C8;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.cm-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a8a7a;}
+.cm-val{font-size:14px;font-weight:600;color:#3D3530;}
+.portal-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(61,53,48,.6);backdrop-filter:blur(8px);align-items:center;justify-content:center;}
+.portal-overlay.visible{display:flex;}
+.portal-login{background:white;border-radius:16px;padding:48px 40px;width:100%;max-width:420px;text-align:center;position:relative;}
+.portal-login-logo{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#8FAF8C,#5d8c5a);display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 20px;}
+.portal-login h2{font-family:var(--font-display);font-size:24px;color:#3D3530;margin-bottom:6px;}
+.portal-login p{font-size:14px;color:#9a8a7a;margin-bottom:28px;}
+.portal-input{width:100%;font-family:var(--font-body);font-size:14px;border:1.5px solid #e8d8c8;border-radius:10px;padding:13px 16px;outline:none;background:#FAF5EE;color:#3D3530;margin-bottom:12px;display:block;}
+.portal-login-btn{width:100%;font-family:var(--font-body);font-size:15px;font-weight:700;background:linear-gradient(135deg,#8FAF8C,#5d8c5a);color:white;border:none;border-radius:50px;padding:15px;cursor:pointer;margin-top:4px;}
+.portal-login-error{background:rgba(196,133,106,.1);border:1px solid rgba(196,133,106,.25);color:#7a4e3c;font-size:13px;border-radius:8px;padding:10px 14px;margin-bottom:12px;display:none;}
+.portal-login-note{font-size:11px;color:#9a8a7a;margin-top:14px;}
+.portal-close-x{position:absolute;top:16px;right:18px;background:none;border:none;font-size:20px;color:#9a8a7a;cursor:pointer;}
+.quiz-page-hero{background:linear-gradient(160deg,#7a4e3c,#C4856A,#a06852);padding:72px 28px 56px;text-align:center;}
+.quiz-page-hero h1{font-family:var(--font-display);font-size:clamp(30px,5vw,52px);color:white;line-height:1.15;margin-bottom:16px;}
+.quiz-page-hero h1 em{font-style:italic;color:#F2D4C8;}
+.quiz-meta-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(250,245,238,.92);font-size:12px;font-weight:700;padding:7px 18px;border-radius:30px;display:inline-flex;align-items:center;gap:6px;margin:4px;}
+.quiz-shell{max-width:700px;margin:0 auto;padding:0 28px 80px;}
+.quiz-progress-track{height:8px;background:#F2D4C8;border-radius:4px;overflow:hidden;margin-bottom:32px;}
+.quiz-progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#F2D4C8,#C4856A);transition:width .5s;}
+.quiz-card{background:white;border-radius:24px;padding:40px;border:1px solid #e8d8c8;box-shadow:0 6px 32px rgba(196,133,106,.1);}
+.quiz-q-num{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C4856A;margin-bottom:12px;}
+.quiz-q-icon{font-size:36px;margin-bottom:14px;}
+.quiz-q-text{font-family:var(--font-display);font-size:clamp(18px,2.5vw,24px);font-weight:600;color:#3D3530;line-height:1.4;margin-bottom:8px;}
+.quiz-q-sub{font-size:13px;color:#9a8a7a;margin-bottom:28px;line-height:1.6;}
+.quiz-options{display:flex;flex-direction:column;gap:10px;}
+.quiz-opt{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:14px;border:2px solid #e8d8c8;background:#FAF5EE;cursor:pointer;transition:all .2s;font-size:14px;font-weight:600;color:#5e5048;text-align:left;font-family:var(--font-body);width:100%;}
+.quiz-opt:hover{border-color:#C4856A;background:#F2D4C8;}
+.quiz-opt.selected{border-color:#C4856A;background:#F2D4C8;color:#7a4e3c;}
+.quiz-opt-dot{width:20px;height:20px;border-radius:50%;border:2px solid #e8d8c8;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;}
+.quiz-opt.selected .quiz-opt-dot{background:#C4856A;border-color:#C4856A;color:white;}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:28px;}
+.quiz-back-btn{background:none;border:1.5px solid #e8d8c8;color:#9a8a7a;font-family:var(--font-body);font-size:13px;font-weight:700;padding:11px 22px;border-radius:30px;cursor:pointer;}
+.quiz-next-btn{background:linear-gradient(135deg,#C4856A,#a06852);border:none;color:white;font-family:var(--font-body);font-size:14px;font-weight:700;padding:13px 32px;border-radius:30px;cursor:pointer;opacity:.4;pointer-events:none;}
+.quiz-next-btn.enabled{opacity:1;pointer-events:all;}
+.quiz-email-gate{background:white;border-radius:24px;padding:44px 40px;border:1px solid #e8d8c8;text-align:center;}
+.quiz-gate-icon{font-size:52px;margin-bottom:16px;}
+.quiz-gate-title{font-family:var(--font-display);font-size:clamp(22px,3vw,30px);color:#3D3530;margin-bottom:10px;}
+.quiz-gate-title em{font-style:italic;color:#C4856A;}
+.quiz-gate-sub{font-size:14px;color:#5e5048;line-height:1.75;max-width:460px;margin:0 auto 28px;}
+.quiz-gate-form{display:flex;flex-direction:column;gap:12px;max-width:380px;margin:0 auto;}
+.quiz-gate-input{font-family:var(--font-body);font-size:15px;border:1.5px solid #e8d8c8;border-radius:12px;padding:14px 18px;outline:none;background:#FAF5EE;color:#3D3530;}
+.quiz-gate-submit{font-family:var(--font-body);font-size:16px;font-weight:700;background:linear-gradient(135deg,#C4856A,#a06852);color:white;border:none;border-radius:50px;padding:16px;cursor:pointer;}
+.result-card{background:white;border-radius:24px;padding:40px;border:1px solid #e8d8c8;text-align:center;}
+.result-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 20px;border-radius:30px;margin-bottom:18px;}
+.result-score-ring{width:160px;height:160px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;border:8px solid #F2D4C8;margin:0 auto 28px;}
+.result-score-num{font-family:var(--font-display);font-size:48px;font-weight:700;line-height:1;}
+.result-score-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+.result-title{font-family:var(--font-display);font-size:clamp(22px,3vw,30px);color:#3D3530;margin-bottom:12px;}
+.result-title em{font-style:italic;color:#C4856A;}
+.result-desc{font-size:15px;color:#5e5048;line-height:1.8;max-width:520px;margin:0 auto 28px;}
+.result-minerals{background:#FAF5EE;border-radius:16px;padding:24px;margin:24px 0;text-align:left;}
+.result-minerals-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9a8a7a;margin-bottom:16px;}
+.mineral-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.mineral-bar-label{font-size:12px;font-weight:700;color:#5e5048;width:80px;flex-shrink:0;}
+.mineral-bar-track{flex:1;height:10px;background:#F2D4C8;border-radius:5px;overflow:hidden;}
+.mineral-bar-fill{height:100%;border-radius:5px;transition:width 1.2s cubic-bezier(.4,0,.2,1);width:0;}
+.mineral-bar-val{font-size:11px;font-weight:700;color:#9a8a7a;width:36px;text-align:right;}
+.result-sequence{background:linear-gradient(135deg,#FAF5EE,#e8f2e7);border:1px solid #e8d8c8;border-radius:16px;padding:24px;margin:24px 0;text-align:left;}
+.result-sequence-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9a8a7a;margin-bottom:16px;}
+.seq-email-row{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid #e8d8c8;}
+.seq-email-row:last-child{border-bottom:none;}
+.seq-email-day{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;width:48px;flex-shrink:0;padding-top:2px;}
+.seq-email-body h4{font-size:13px;font-weight:700;color:#3D3530;margin-bottom:2px;}
+.seq-email-body p{font-size:12px;color:#9a8a7a;line-height:1.5;}
+.result-retake{background:none;border:1.5px solid #e8d8c8;color:#9a8a7a;font-family:var(--font-body);font-size:13px;font-weight:700;padding:12px 24px;border-radius:30px;cursor:pointer;}
+.blog-hero{background:linear-gradient(160deg,#F2D4C8,#FAF5EE);padding:72px 28px 56px;text-align:center;}
+.blog-card{background:white;border-radius:20px;border:1px solid #e8d8c8;overflow:hidden;transition:transform .25s,box-shadow .25s;cursor:pointer;display:flex;flex-direction:column;}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(196,133,106,.12);}
+.blog-card-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:48px;}
+.blog-card-body{padding:22px;flex:1;display:flex;flex-direction:column;}
+.blog-card h3{font-family:var(--font-display);font-size:17px;color:#3D3530;line-height:1.35;margin-bottom:10px;}
+.blog-card p{font-size:13px;color:#5e5048;line-height:1.65;flex:1;margin-bottom:16px;}
+.blog-tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:#F2D4C8;color:#a06852;display:inline-block;margin-bottom:12px;}
+.blog-meta{font-size:11px;color:#9a8a7a;}
+.blog-filter{font-family:var(--font-body);font-size:12px;font-weight:700;padding:8px 18px;border-radius:30px;border:1.5px solid #e8d8c8;background:white;color:#9a8a7a;cursor:pointer;}
+.blog-filter.active{background:#C4856A;color:white;border-color:#C4856A;}
+.blog-post-overlay{display:none;position:fixed;inset:0;z-index:2000;background:rgba(61,53,48,.6);backdrop-filter:blur(8px);overflow-y:auto;}
+.blog-post-inner{max-width:740px;margin:40px auto;background:white;border-radius:24px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.2);position:relative;}
+.blog-post-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.9);border:none;border-radius:50%;width:36px;height:36px;font-size:18px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;}
+.blog-post-content{padding:40px;}
+.blog-post-content h1{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);color:#3D3530;margin:16px 0 10px;line-height:1.25;}
+.blog-post-content p{font-size:15px;color:#5e5048;line-height:1.85;margin-bottom:16px;}
+.blog-post-content h3{font-family:var(--font-display);font-size:20px;color:#3D3530;margin:28px 0 12px;}
+.blog-post-content .highlight{background:#F2D4C8;border-left:4px solid #C4856A;border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:14px;color:#7a4e3c;font-weight:600;line-height:1.7;}
+.blog-post-content .highlight-sage{background:#e8f2e7;border-left:4px solid #5d8c5a;border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;font-size:14px;color:#3d6e3a;font-weight:600;line-height:1.7;}
+.recipe-box{background:#FAF5EE;border-radius:16px;padding:24px;margin-bottom:12px;}
+.recipe-box h4{font-family:var(--font-display);font-size:17px;color:#3D3530;margin-bottom:8px;}
+.recipe-box p{font-size:13.5px;color:#5e5048;line-height:1.7;margin-bottom:0;}
+.footer{background:linear-gradient(160deg,#3D3530,#5a4038);color:#FAF5EE;padding:60px 28px 40px;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;}
+@media(max-width:700px){.footer-inner{grid-template-columns:1fr 1fr;}}
+@media(max-width:440px){.footer-inner{grid-template-columns:1fr;}}
+.footer-tagline{font-size:13px;color:rgba(250,245,238,.55);margin-top:12px;line-height:1.7;}
+.footer-ig{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:12px;font-weight:700;color:#F2D4C8;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:7px 16px;border-radius:30px;}
+.footer-col h4{font-family:var(--font-display);font-size:15px;font-weight:600;color:#F2D4C8;margin-bottom:14px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:8px;}
+.footer-col ul li a{font-size:13px;color:rgba(250,245,238,.5);cursor:pointer;}
+.footer-col ul li a:hover{color:#F2D4C8;}
+.footer-bottom{max-width:1100px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:rgba(250,245,238,.3);flex-wrap:wrap;gap:8px;}
+@media(max-width:680px){
+  .home-hero-inner{grid-template-columns:1fr!important;text-align:center;}
+  .hero-btns{justify-content:center;}
+  .hero-desc{margin:0 auto 32px!important;}
+  .hero-trust{justify-content:center!important;}
+  .about-hero-inner{grid-template-columns:1fr!important;gap:36px!important;}
+  .price-box{padding:32px 24px!important;}
+  .quiz-card{padding:28px 20px!important;}
+  .quiz-email-gate{padding:32px 20px!important;}
+  .result-card{padding:28px 20px!important;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">
+      <div class="nav-logo-mark">🌸</div>
+      <div>
+        <div class="nav-logo-text">Mineral Maven</div>
+        <span class="nav-logo-sub">Jenifer Allen</span>
+      </div>
+    </div>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="mobileNav">
+  <a onclick="showPage('home')">🏠 Home</a>
+  <a onclick="showPage('about')">🌸 About Me</a>
+  <a onclick="showPage('men')">💪 For Men</a>
+  <a onclick="showPage('postpartum')">🌸 Postpartum Moms</a>
+  <a onclick="showPage('resources')">📚 Resources &amp; Shop</a>
+  <a onclick="showPage('blog')">✍️ Blog</a>
+  <a onclick="showPage('contact')">💌 Contact</a>
+  <a onclick="openPortalLogin()">🔒 Client Portal</a>
+  <a class="quiz-link" onclick="showPage('quiz')">✦ Take the Free Quiz</a>
+</div>
+
+<div class="portal-overlay" id="portalOverlay">
+  <div class="portal-login">
+    <button class="portal-close-x" onclick="closePortal()">✕</button>
+    <div class="portal-login-logo">🌿</div>
+    <h2>Client Portal</h2>
+    <p>Sign in to access your personalised protocol, labs, and messages.</p>
+    <div class="portal-login-error" id="loginError">Incorrect email or password.</div>
+    <input class="portal-input" id="loginEmail" type="email" placeholder="Email address">
+    <input class="portal-input" id="loginPassword" type="password" placeholder="Password">
+    <button class="portal-login-btn" onclick="attemptLogin()">Sign In →</button>
+    <div class="portal-login-note">🔒 Secure · hello@mineralmaven.com</div>
+  </div>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <section style="background:linear-gradient(160deg,#fdf7f2,#F2D4C8 55%,#e8f2e7);min-height:calc(100vh - 72px);display:flex;align-items:center;padding:80px 28px;position:relative;overflow:hidden;">
+    <div style="max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1;" class="home-hero-inner">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C4856A;margin-bottom:20px;">✦ Hair Tissue Mineral Analysis</div>
+        <h1 style="font-family:var(--font-display);font-size:clamp(36px,5vw,60px);font-weight:700;line-height:1.1;color:#3D3530;margin-bottom:20px;">Your minerals.<br><em style="font-style:italic;color:#C4856A;">Your map.</em><br>Your health.</h1>
+        <p class="hero-desc" style="font-size:17px;color:#5e5048;line-height:1.8;margin-bottom:36px;max-width:500px;">HTMA testing reveals exactly what your body is missing. Whether you're a postpartum mama or a man tired of feeling less than his best — your minerals tell the whole story.</p>
+        <div class="hero-btns" style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="btn-primary" onclick="showPage('quiz')">✦ Take the Free Quiz</button>
+          <button class="btn-secondary" onclick="showPage('postpartum')">Nourish Mama Method</button>
+          <button class="btn-secondary" style="border-color:#e8f2e7;color:#5d8c5a;" onclick="showPage('men')">Endless Energy — Men</button>
+          <a href="https://l.bttr.to/73Zh5" target="_blank" class="btn-secondary" style="border-color:#C9A96E;color:#8a6010;">📞 Free Consultation</a>
+        </div>
+        <div class="hero-trust" style="margin-top:32px;display:flex;align-items:center;gap:12px;font-size:13px;color:#9a8a7a;font-weight:600;">
+          <div style="display:flex;"><span style="width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid white;background:linear-gradient(135deg,#F2D4C8,#C4856A);">😊</span><span style="width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid white;background:linear-gradient(135deg,#F2D4C8,#C4856A);margin-left:-8px;">😊</span><span style="width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;border:2px solid white;background:linear-gradient(135deg,#F2D4C8,#C4856A);margin-left:-8px;">😊</span></div>
+          Trusted by 400+ clients worldwide
+        </div>
+      </div>
+      <div style="position:relative;max-width:420px;">
+        <div style="width:100%;aspect-ratio:3/4;border-radius:28px 28px 80px 28px;background:linear-gradient(160deg,#F2D4C8,#f5ead8);display:flex;align-items:center;justify-content:center;font-size:80px;box-shadow:0 24px 64px rgba(196,133,106,.2);">🌸</div>
+        <div style="position:absolute;bottom:24px;right:-16px;background:white;border-radius:16px;padding:14px 18px;box-shadow:0 8px 28px rgba(0,0,0,.1);border:1px solid #e8d8c8;text-align:center;">
+          <div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#5d8c5a;">400+</div>
+          <div style="font-size:11px;color:#9a8a7a;font-weight:600;">Clients Restored</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#F2D4C8;">
+    <div class="container">
+      <div class="u-center" style="margin-bottom:48px;">
+        <div class="section-eyebrow">Who We Help</div>
+        <h2 class="section-title">Minerals affect <em>everyone.</em></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto;">
+        <div style="background:linear-gradient(160deg,#F2D4C8,white);border-radius:24px;padding:40px;border:1px solid #e8d8c8;">
+          <div style="font-size:48px;margin-bottom:16px;">🌸</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;color:#3D3530;margin-bottom:10px;">Postpartum Mamas</h3>
+          <p style="font-size:14px;color:#5e5048;line-height:1.75;margin-bottom:20px;">Pregnancy, birth, and breastfeeding are among the most mineral-depleting events in human biology. The Nourish Mama Method is built for you.</p>
+          <button class="btn-primary" onclick="showPage('postpartum')" style="width:100%;justify-content:center;">The Nourish Mama Method →</button>
+        </div>
+        <div style="background:linear-gradient(160deg,#e8f2e7,white);border-radius:24px;padding:40px;border:1px solid #e8d8c8;">
+          <div style="font-size:48px;margin-bottom:16px;">💪</div>
+          <h3 style="font-family:var(--font-display);font-size:22px;color:#3D3530;margin-bottom:10px;">Men</h3>
+          <p style="font-size:14px;color:#5e5048;line-height:1.75;margin-bottom:20px;">Low testosterone, poor recovery, brain fog — mineral imbalances are often the overlooked root cause.</p>
+          <button onclick="showPage('men')" style="width:100%;justify-content:center;display:flex;font-family:var(--font-body);font-size:14px;font-weight:700;background:linear-gradient(135deg,#8FAF8C,#5d8c5a);color:white;border:none;border-radius:50px;padding:14px;cursor:pointer;">Endless Energy Program →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#FAF5EE;">
+    <div class="container">
+      <div class="u-center"><div class="section-eyebrow">How It Works</div><h2 class="section-title">Precision, not <em>guesswork.</em></h2></div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon" style="background:rgba(196,133,106,.12);">💌</div><h3>1. Take the Quiz</h3><p>Answer 8 questions about your symptoms to get your free mineral depletion score instantly.</p></div>
+        <div class="feature-card"><div class="feature-icon" style="background:rgba(143,175,140,.15);">🔬</div><h3>2. HTMA Testing</h3><p>A kit arrives at your door. A small hair sample reveals 40+ minerals and heavy metal markers.</p></div>
+        <div class="feature-card"><div class="feature-icon" style="background:rgba(201,169,110,.15);">🎥</div><h3>3. Recorded Review</h3><p>A 30-minute session walking through every finding in plain language — recorded and yours to keep.</p></div>
+        <div class="feature-card"><div class="feature-icon" style="background:rgba(143,175,140,.12);">📋</div><h3>4. Your Custom Plan</h3><p>A fully personalised 16-week protocol — food, targeted supplements, lifestyle — built around you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#F2D4C8;">
+    <div class="container">
+      <div class="u-center" style="margin-bottom:40px;"><div class="section-eyebrow">Client Stories</div><h2 class="section-title">Results that <em>speak for themselves</em></h2></div>
+
+      <div style="background:linear-gradient(135deg,rgba(122,78,60,.08),rgba(122,78,60,.03));border:1px solid #e8d8c8;border-radius:18px;padding:28px 32px;max-width:860px;margin:0 auto 32px;">
+        <p style="font-family:'Lora',serif;font-size:clamp(15px,2vw,18px);color:#3D3530;line-height:1.7;font-style:italic;margin-bottom:12px;">"This isn't another generic supplement protocol. Your HTMA tells us exactly what your body is missing — not what postpartum bodies in general are missing. That's why this works when other things haven't."</p>
+        <p style="font-size:12px;color:#9a8a7a;">— Jenifer Allen, Functional Nutritionist</p>
+      </div>
+
+      <div class="testis-grid">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"By week 8 my hair stopped falling out in clumps. I had tried three different postpartum vitamins before this and nothing touched it. My HTMA showed my ferritin was critically low — something my GP had never flagged. Once we addressed that specifically, everything shifted."</p><div class="testi-author"><div class="testi-av">S</div><div><div class="testi-name">Sarah M.</div><div class="testi-detail">Nourish Mama Method · 8 months postpartum</div></div></div></div>
+
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"By week 6 I stopped waking up in a panic at 3am. I'd been told it was just anxiety and offered medication. My results showed severely elevated copper and almost no zinc — a pattern Jenifer said she sees constantly postpartum. Two targeted supplements changed everything."</p><div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#e8f2e7,#8FAF8C);">K</div><div><div class="testi-name">Kate R.</div><div class="testi-detail">Nourish Mama Method · 5 months postpartum</div></div></div></div>
+
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I wasn't expecting a miracle — I just wanted real answers. Getting a map of exactly what my body was missing, and a plan built around that, changed everything about how I approached my recovery. By week 10 I could finish a sentence without losing my train of thought."</p><div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#f5ead8,#C9A96E);">L</div><div><div class="testi-name">Lauren K.</div><div class="testi-detail">Chronic Fatigue Client</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#FAF5EE;">
+    <div class="container--sm u-center">
+      <div class="section-eyebrow">Ready to Start?</div>
+      <h2 class="section-title">Not sure where to begin?<br><em>The quiz will tell you.</em></h2>
+      <p class="section-lead center" style="margin-bottom:32px;">Take 2 minutes. Get your free mineral depletion score.</p>
+      <button class="btn-primary" onclick="showPage('quiz')" style="font-size:17px;padding:18px 44px;">✦ Take the Free Quiz →</button>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#F2D4C8;">
+    <div class="container">
+      <div class="u-center">      <div class="section-eyebrow">On Instagram</div><h2 class="section-title">Come say hello <em>@mineralmaven_</em></h2></div>
+      <div class="ig-grid">
+        <div class="ig-tile" style="background:linear-gradient(135deg,#F2D4C8,#C4856A);"><div class="ig-tile-inner"><div class="ig-tile-emoji">🔬</div><div class="ig-tile-label">HTMA Tips</div></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#e8f2e7,#8FAF8C);"><div class="ig-tile-inner"><div class="ig-tile-emoji">🥗</div><div class="ig-tile-label">Mineral Meals</div></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#f5ead8,#C9A96E);"><div class="ig-tile-inner"><div class="ig-tile-emoji">💊</div><div class="ig-tile-label">Supplements</div></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#F2D4C8,#a06852);"><div class="ig-tile-inner"><div class="ig-tile-emoji">🌸</div><div class="ig-tile-label">Postpartum</div></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#f5ead8,#C9A96E);"><div class="ig-tile-inner"><div class="ig-tile-emoji">✨</div><div class="ig-tile-label">Client Wins</div></div></div>
+        <div class="ig-tile" style="background:linear-gradient(135deg,#e8f2e7,#5d8c5a);"><div class="ig-tile-inner"><div class="ig-tile-emoji">🍃</div><div class="ig-tile-label">Healing Foods</div></div></div>
+      </div>
+      <div style="text-align:center;margin-top:28px;">
+        <a href="https://instagram.com/mineralmaven_" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:14px;font-weight:700;color:white;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);padding:14px 32px;border-radius:50px;border:none;cursor:pointer;">📸 Follow @mineralmaven_</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div id="page-about" class="page">
+  <section style="background:linear-gradient(160deg,#F2D4C8,#FAF5EE);padding:80px 28px;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:center;" class="about-hero-inner">
+        <div style="position:relative;">
+          <div style="width:100%;max-width:400px;aspect-ratio:3/4;background:linear-gradient(160deg,#F2D4C8,#f5ead8);border-radius:28px 28px 28px 80px;display:flex;align-items:center;justify-content:center;font-size:80px;box-shadow:0 20px 60px rgba(196,133,106,.18);">🌸</div>
+          <div style="position:absolute;bottom:20px;right:-16px;background:white;border-radius:16px;padding:14px 18px;box-shadow:0 8px 28px rgba(0,0,0,.1);border:1px solid #e8d8c8;text-align:center;"><div style="font-family:var(--font-display);font-size:26px;font-weight:700;color:#C4856A;">400+</div><div style="font-size:11px;color:#9a8a7a;font-weight:600;">Clients Restored</div></div>
+        </div>
+        <div>
+          <div class="section-eyebrow">Meet Jenifer Allen</div>
+          <h1 style="font-family:var(--font-display);font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.15;color:#3D3530;margin-bottom:20px;">I was told it was <em style="font-style:italic;color:#C4856A;">impossible.</em><br>I did it anyway.</h1>
+          <p style="font-size:15.5px;color:#5e5048;line-height:1.85;margin-bottom:16px;">I was told I'd probably end up in a wheelchair, that my body would never handle pregnancy. Today, I'm thriving postpartum, chasing around my son, and helping others do what doctors said was impossible.</p>
+          <p style="font-size:15.5px;color:#5e5048;line-height:1.85;margin-bottom:16px;">Along the way, I found doctors who supported my holistic journey — practitioners who worked with me, not against me, and who helped me understand that healing was possible.</p>
+          <p style="font-size:15.5px;color:#5e5048;line-height:1.85;margin-bottom:20px;">I became a functional nutritionist because I know what it feels like to be dismissed and told there's no hope — and to prove every single one of those limiting beliefs wrong.</p>
+          <div style="background:linear-gradient(135deg,rgba(143,175,140,.1),rgba(143,175,140,.05));border-left:3px solid #8FAF8C;border-radius:0 12px 12px 0;padding:14px 18px;margin:20px 0;font-size:15px;color:#5d8c5a;font-weight:600;font-style:italic;">"If you've tried everything and are still suffering, you're exactly where you need to be."</div>
+          <div style="margin:20px 0;">
+            <span class="cred-pill">🎓 Functional Nutritionist</span>
+            <span class="cred-pill">🌿 Holistic Nutritionist</span>
+            <span class="cred-pill">🔬 HTMA Practitioner</span>
+            <span class="cred-pill">🌸 Postpartum Specialist</span>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <button class="btn-primary" onclick="showPage('quiz')">✦ Take the Free Quiz</button>
+            <button class="btn-secondary" onclick="showPage('contact')">Work With Me</button>
+            <a href="https://l.bttr.to/73Zh5" target="_blank" class="btn-secondary" style="border-color:#C9A96E;color:#8a6010;">📞 Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- POSTPARTUM -->
+<div id="page-postpartum" class="page">
+  <section style="background:linear-gradient(160deg,#7a4e3c,#C4856A,#a06852);padding:96px 28px 80px;text-align:center;">
+    <div class="container--sm">
+      <div class="section-eyebrow" style="color:#F2D4C8;background:rgba(255,255,255,.15);">For Postpartum Mamas</div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(32px,5vw,56px);color:white;line-height:1.12;margin-bottom:18px;">The Nourish Mama Method<br><em style="color:#F2D4C8;">16 Weeks Back to You</em></h1>
+      <p style="font-size:17px;color:rgba(250,245,238,.78);max-width:580px;margin:0 auto 36px;line-height:1.75;">Pregnancy, birth, and breastfeeding are among the most mineral-depleting events in human biology. What you're feeling isn't weakness — it's depletion. The Nourish Mama Method gives you a precise, personalised starting point for rebuilding.</p>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px 32px;max-width:600px;margin:0 auto 28px;text-align:left;">
+        <p style="font-family:'Lora',serif;font-size:clamp(15px,2vw,18px);color:white;line-height:1.7;font-style:italic;margin-bottom:0;">"You know that feeling of not recognising yourself in the mirror — not just physically, but energetically? You used to feel like you. Now you feel like you're just surviving. That version of you isn't gone. She's depleted. And depletion has a solution."</p>
+      </div>
+      <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:28px 32px;max-width:600px;margin:0 auto 36px;text-align:left;">
+        <p style="font-family:'Lora',serif;font-size:clamp(15px,2vw,18px);color:white;line-height:1.7;font-style:italic;margin-bottom:12px;">"Nobody told you postpartum would feel like this. Your 6-week checkup was 10 minutes. You were cleared and sent home. But 'cleared' doesn't mean recovered — and your body is still sending you signals that something is off."</p>
+        <p style="font-size:12px;color:rgba(250,245,238,.5);margin-bottom:0;">Nearly 1 in 5 women experience depression in the year after birth — and countless more are quietly struggling with depletion that never gets named, let alone addressed.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:36px;">
+        <span style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(250,245,238,.92);font-size:12px;font-weight:600;padding:6px 16px;border-radius:30px;">✦ HTMA Testing Included</span>
+        <span style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(250,245,238,.92);font-size:12px;font-weight:600;padding:6px 16px;border-radius:30px;">✦ 16 Weekly Check-Ins</span>
+        <span style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(250,245,238,.92);font-size:12px;font-weight:600;padding:6px 16px;border-radius:30px;">✦ Recorded Results Review</span>
+        <span style="background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);color:rgba(250,245,238,.92);font-size:12px;font-weight:600;padding:6px 16px;border-radius:30px;">✦ Custom Action Plan</span>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <button class="btn-primary" style="background:white;color:#C4856A;"><a href="https://l.bttr.to/OkVGf" target="_blank" style="color:#C4856A;text-decoration:none;">Yes, I'm Ready to Replenish →</a></button>
+        <button class="btn-secondary" style="border-color:rgba(255,255,255,.4);color:white;background:rgba(255,255,255,.12);" onclick="showPage('quiz')">✦ Take the Free Quiz First</button>
+        <a href="https://l.bttr.to/73Zh5" target="_blank" class="btn-secondary" style="border-color:rgba(255,255,255,.35);color:white;background:rgba(255,255,255,.12);">📞 Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#3D3530;padding:var(--section-pad) 0;">
+    <div class="container">
+      <h2 style="font-family:var(--font-display);font-size:clamp(24px,3.5vw,38px);color:white;text-align:center;margin-bottom:16px;">Your care team did their job.<br><em style="color:#F2D4C8;">Now let's do the rest.</em></h2>
+      <p style="text-align:center;color:rgba(255,255,255,.5);max-width:560px;margin:0 auto 16px;font-size:15px;">Standard postpartum care wasn't designed to address mineral depletion — that's not a failure, it's just a gap. This is where we pick up.</p>
+      <p style="text-align:center;color:rgba(255,255,255,.4);max-width:600px;margin:0 auto 48px;font-size:13px;line-height:1.75;font-style:italic;">Mothers recover on their own from one of the hardest physical episodes they have ever endured — struggling with pain, bleeding, breastfeeding challenges, social dynamic changes, and little sleep. Almost 1 in 5 women experience depression in the year after birth. You are not alone, and what you're feeling has a name.</p>
+      <div class="pain-grid-2">
+        <div class="pain-card"><div class="pain-emoji">😴</div><h4>Crushing Fatigue</h4><p>Iron, zinc, and magnesium depletion — your body gave these to your baby first.</p></div>
+        <div class="pain-card"><div class="pain-emoji">🦱</div><h4>Hair Loss</h4><p>Zinc, iron, and selenium depletion are the primary drivers of postpartum shedding.</p></div>
+        <div class="pain-card"><div class="pain-emoji">😟</div><h4>Anxiety and Mood</h4><p>Many HTMA practitioners observe a pattern between elevated copper, low zinc, and heightened anxiety postpartum — your doctor may not reference this, but it's worth exploring.</p></div>
+        <div class="pain-card"><div class="pain-emoji">🧠</div><h4>Mom Brain</h4><p>DHA and choline depletion through pregnancy and nursing drive this directly.</p></div>
+        <div class="pain-card"><div class="pain-emoji">🍼</div><h4>Milk Supply Dips</h4><p>Your baby draws minerals through every feed. For some mamas, addressing mineral depletion is a piece of the supply puzzle that's often overlooked.</p></div>
+        <div class="pain-card"><div class="pain-emoji">🩺</div><h4>Feeling Cleared But Not Recovered</h4><p>Your 6-week check said you were fine. But cleared isn't the same as recovered — and your body knows the difference. Mineral depletion doesn't show up on a standard panel.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#FAF5EE;">
+    <div class="container">
+      <div class="u-center"><div class="section-eyebrow">Everything Included</div><h2 class="section-title">Here's <em>exactly</em> what you get</h2></div>
+      <div class="delivers-grid">
+        <div class="deliver-card"><div class="deliver-icon" style="background:rgba(196,133,106,.12);">🔬</div><h3>HTMA Lab Test Kit</h3><p>Mailed to your home. Analyses 40+ minerals and heavy metals from a small hair sample.</p><div class="deliver-tag">Included — $250 value</div></div>
+        <div class="deliver-card"><div class="deliver-icon" style="background:rgba(143,175,140,.12);">🎥</div><h3>Recorded Results Review</h3><p>A full 30-minute session walking through every HTMA finding. Recorded and yours forever.</p><div class="deliver-tag">30-Minute Deep Dive</div></div>
+        <div class="deliver-card"><div class="deliver-icon" style="background:rgba(201,169,110,.12);">📋</div><h3>Custom 16-Week Plan</h3><p>Fully personalised written protocol: targeted foods, precise supplements, meal planning.</p><div class="deliver-tag">100% Personalised</div></div>
+        <div class="deliver-card"><div class="deliver-icon" style="background:rgba(196,133,106,.1);">📞</div><h3>16 Weekly Check-Ins</h3><p>Every week, for 16 weeks, someone shows up for you. No agenda except your recovery. That consistency — someone in your corner who knows your results, your symptoms, and your progress — is something most moms never get.</p><p style="font-size:12px;color:#9a8a7a;line-height:1.65;margin-top:10px;font-style:italic;">Nearly 20% of moms received no support beyond their partner — and of those who did, 42% said it wasn't enough. Consistent, knowledgeable support isn't a luxury. It's what actually moves the needle.</p><div class="deliver-tag">Every Week, All 16</div></div>
+        <div class="deliver-card"><div class="deliver-icon" style="background:rgba(143,175,140,.1);">🌿</div><h3>16-Week Meal Plan</h3><p>A full 16-week meal plan built directly from your HTMA results — every meal targeting your specific mineral picture, not a generic template.</p><div class="deliver-tag">Built Around Your Results</div></div>
+        <div class="deliver-card"><div class="deliver-icon" style="background:rgba(201,169,110,.1);">💬</div><h3>Between-Call Support</h3><p>Direct messaging access between calls for questions and anything that comes up day-to-day.</p><div class="deliver-tag">Ongoing Access</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:linear-gradient(160deg,#7a4e3c,#C4856A);padding:var(--section-pad) 28px;text-align:center;">
+    <div class="section-eyebrow" style="background:rgba(255,255,255,.15);color:rgba(250,245,238,.85);margin-bottom:16px;">Enrollment Open</div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(26px,4vw,44px);color:white;margin-bottom:14px;">Ready to come back <em style="color:#F2D4C8;">to yourself?</em></h2>
+    <p style="color:rgba(255,255,255,.62);margin-bottom:32px;font-size:15px;max-width:520px;margin-left:auto;margin-right:auto;">Limited spots each month to ensure every client receives full, personal attention.</p>
+    <div style="background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:36px 40px;max-width:680px;margin:0 auto 28px;text-align:left;">
+      <div style="font-size:28px;margin-bottom:16px;">🌸</div>
+      <p style="font-family:'Lora',serif;font-size:clamp(17px,2.5vw,22px);color:white;line-height:1.6;font-style:italic;margin-bottom:20px;">"The hardest part isn't the work — it's giving yourself permission. You've spent 9 months prioritising your baby. This is the first 16 weeks you prioritise you. That's not selfish. That's survival."</p>
+      <div style="height:1px;background:rgba(255,255,255,.15);margin-bottom:20px;"></div>
+      <p style="font-size:14px;color:rgba(250,245,238,.7);line-height:1.75;margin-bottom:0;">And here's the truth about cost: the expense of <em style="color:white;font-style:normal;">not</em> addressing depletion compounds over time. Years of fatigue, mood instability, thyroid dysfunction, and chronic health issues cost far more — in medical appointments, lost productivity, and quality of life — than addressing the root cause now. Investing in your mineral health postpartum isn't an indulgence. It's the most practical thing you can do for your family and for yourself.</p>
+    </div>
+
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:36px 40px;max-width:680px;margin:0 auto 48px;text-align:left;">
+      <div style="font-size:28px;margin-bottom:16px;">🧠</div>
+      <p style="font-family:'Lora',serif;font-size:clamp(16px,2vw,20px);color:white;line-height:1.6;font-style:italic;margin-bottom:20px;">"You don't have to research supplements, decode lab results, or figure out what to eat. That's what the 16 weeks are for — we handle the complexity so you don't have to."</p>
+      <div style="height:1px;background:rgba(255,255,255,.15);margin-bottom:20px;"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:16px;">
+          <div style="font-size:18px;margin-bottom:8px;">❌</div>
+          <div style="font-size:12px;font-weight:700;color:rgba(250,245,238,.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">Without the program</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:13px;color:rgba(250,245,238,.6);line-height:1.55;">Hours down supplement rabbit holes with no clear answer</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.6);line-height:1.55;">Lab results that read like a foreign language</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.6);line-height:1.55;">Trying five things at once and not knowing what's working</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.6);line-height:1.55;">Meal planning on zero energy with no direction</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.6);line-height:1.55;">Feeling like you should know the answer by now</li>
+          </ul>
+        </div>
+        <div style="background:rgba(242,212,200,.12);border-radius:12px;padding:16px;border:1px solid rgba(242,212,200,.2);">
+          <div style="font-size:18px;margin-bottom:8px;">✓</div>
+          <div style="font-size:12px;font-weight:700;color:#F2D4C8;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;">With the program</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:13px;color:rgba(250,245,238,.8);line-height:1.55;">A precise supplement list built from your actual results</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.8);line-height:1.55;">Every finding explained in plain language on a recorded call</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.8);line-height:1.55;">One clear protocol — nothing to cross-reference or second-guess</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.8);line-height:1.55;">A 16-week meal plan that does the thinking for you</li>
+            <li style="font-size:13px;color:rgba(250,245,238,.8);line-height:1.55;">Weekly check-ins so you're never navigating alone</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="price-box">
+      <div class="price-box-badge">The Nourish Mama Method — 16 Weeks</div>
+      <h3>The Nourish Mama Method</h3>
+      <div class="price-box-tagline">Everything you need. Nothing you don't.</div>
+      <div class="price-num"><sup>$</sup>947</div>
+      <div style="font-size:13px;color:#9a8a7a;margin-bottom:6px;">paid in full</div>
+      <div class="price-or">— or —</div>
+      <div class="price-plan">3 payments of $349</div>
+      <ul class="incl-list">
+        <li class="incl-item"><div class="incl-check">✓</div>HTMA Lab Test Kit</li>
+        <li class="incl-item"><div class="incl-check">✓</div>30-Min Recorded Results Review</li>
+        <li class="incl-item"><div class="incl-check">✓</div>Custom 16-Week Action Plan</li>
+        <li class="incl-item"><div class="incl-check">✓</div>16 Weekly Video Check-In Reviews</li>
+        <li class="incl-item"><div class="incl-check">✓</div>16-Week Meal Plan Built Around Your Results</li>
+        <li class="incl-item"><div class="incl-check">✓</div>Between-Call Messaging Support</li>
+        <li class="incl-item" style="background:#FAF5EE;border-radius:8px;padding:10px 12px;margin-top:8px;border:none;"><div style="font-size:11px;color:#9a8a7a;line-height:1.65;"><strong style="color:#5e5048;">Optional supplement costs:</strong> Supplements are optional but recommended for best results. Most clients choose to spend $80–$150/month on targeted supplements based on their HTMA findings. You'll only ever be recommended what your results show you actually need — no generic stacks — and budget-friendly options are always provided.</div></li>
+      </ul>
+      <a href="https://l.bttr.to/OkVGf" target="_blank" class="price-cta" style="display:block;text-align:center;text-decoration:none;">Apply for The Nourish Mama Method →</a>
+      <div class="price-note" style="margin-bottom:8px;">🔒 Secure enrollment · <a href="https://l.bttr.to/OkVGf" target="_blank" style="color:#C4856A;">Enroll now</a> · <a href="https://l.bttr.to/73Zh5" target="_blank" style="color:#9a8a7a;">Book a free consultation first</a></div>
+      <div style="background:#FAF5EE;border-radius:12px;padding:14px 16px;margin-top:12px;font-size:11px;color:#9a8a7a;line-height:1.65;text-align:left;">
+        <strong style="color:#5e5048;">Scope of practice notice:</strong> The Nourish Mama Method is a nutritional and wellness coaching program. It is not a substitute for medical advice, diagnosis, or treatment. HTMA is a functional wellness tool, not a diagnostic test.         Always consult your healthcare provider before making changes to your diet or supplement regimen, particularly if you have a diagnosed condition or are taking medication.
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:var(--section-pad) 0;background:#F2D4C8;">
+    <div class="container">
+      <div class="u-center"><div class="section-eyebrow">Questions</div><h2 class="section-title">Frequently asked <em>questions</em></h2></div>
+      <div class="faq-wrap">
+        <div class="faq-item"><button class="faq-q-btn" onclick="toggleFaq(this)"><span>I've already tried supplements and nothing worked — why would this be different?</span><div class="faq-icon-btn">+</div></button><div class="faq-ans">Because generic supplements are built for generic deficiencies — and your deficiencies aren't generic. Most postpartum supplement stacks are designed around what postpartum bodies statistically tend to need. But your HTMA tells us what your body specifically is missing, in what amounts, and — just as importantly — what mineral antagonisms might be blocking absorption in the first place. Taking iron when your copper is sky-high, or adding calcium when your magnesium is depleted, can actively work against you. That's why so many women try everything and still feel nothing. The difference here isn't the supplements — it's knowing exactly which ones, in which forms, at which doses, and in which order. That precision is what your HTMA makes possible.</div></div><div class="faq-ans">Your 16 weeks starts from the moment you enrol — not from when your results arrive. While your kit is in transit and your sample is being processed, we don't just wait. The first few weeks are dedicated to foundation work: stabilising blood sugar, improving digestion and gut integrity, reducing the most common mineral antagonists in your diet, and building the daily habits that make your body actually ready to absorb and use the minerals we'll be targeting once your results are in. Think of it as preparing the soil before planting. By the time your HTMA results arrive — typically 2–4 weeks in — your body is already in a far better position to respond to a targeted protocol. The lab processing window doesn't cost you time. It becomes part of the plan.</div></div><div class="faq-ans">Any time — and earlier is often better. You can test before giving birth to establish a baseline picture of your mineral status going in, which makes your postpartum recovery far more targeted from day one. And if you're already postpartum, testing is valuable at any stage up to 5 years after birth. Mineral depletion doesn't resolve on its own with time — many mamas are still significantly depleted years later without realising it. Wherever you are in your journey, your HTMA results will reflect your current picture and your protocol will be built from there.</div></div><div class="faq-ans">You can enroll from 6 weeks postpartum all the way through 3 years. It's never too late to replenish.</div></div>
+        <div class="faq-item"><button class="faq-q-btn" onclick="toggleFaq(this)"><span>Is HTMA safe while breastfeeding?</span><div class="faq-icon-btn">+</div></button><div class="faq-ans">Completely. HTMA is just a small hair sample — no blood draw, no intervention. All recommendations are breastfeeding-safe.</div></div>
+        <div class="faq-item"><button class="faq-q-btn" onclick="toggleFaq(this)"><span>What happens if my results show elevated heavy metals?</span><div class="faq-icon-btn">+</div></button><div class="faq-ans">First — please don't panic. Elevated heavy metal markers on an HTMA are common, especially postpartum, and seeing them on your results is information, not a diagnosis. It means your body has been exposed to something over time (often through food, water, or everyday environment) and your tissues have been storing it. The important thing is that we now know, and we can work with it. Depending on what your results show, we'll build a gentle, food-first approach to supporting your body's natural elimination pathways — increasing mineral cofactors that compete with heavy metals, supporting liver and gut function, and adjusting your protocol to avoid anything that might mobilise metals too quickly. If your results show something that warrants medical follow-up, I will always refer you to your healthcare provider rather than attempt to manage that within a wellness coaching scope. Your safety comes before the program. Having a plan is always better than not knowing.</div></div>
+        <div class="faq-item"><button class="faq-q-btn" onclick="toggleFaq(this)"><span>I colour or chemically treat my hair — can I still test?</span><div class="faq-icon-btn">+</div></button><div class="faq-ans">Yes, but timing matters. Hair dye, bleach, perms, and chemical relaxers can affect the mineral readings in treated hair — so we need to work with untreated growth. The rule of thumb is to wait at least 4 weeks after your last colour or treatment before collecting your sample, and we always take hair from the root end (the 3–4cm closest to your scalp), which reflects the most recent and most reliable data. If you've recently had a treatment, we'll note it on your intake form and factor it into how we interpret your results. In some cases where hair is heavily processed throughout, I may recommend waiting a full growth cycle before testing — I'll let you know after reviewing your intake. Either way, it won't hold up your program start; we can begin the foundational work while we wait for the right testing window.</div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- MEN -->
+<div id="page-men" class="page">
+  <section style="background:linear-gradient(160deg,#3d6e3a,#5d8c5a,#2a4a28);padding:96px 28px 80px;text-align:center;">
+    <div class="container--sm">
+      <div class="section-eyebrow" style="color:#e8f2e7;background:rgba(255,255,255,.15);">For Men</div>
+      <h1 style="font-family:var(--font-display);font-size:clamp(32px,5vw,56px);color:white;line-height:1.12;margin-bottom:18px;">You're not slowing down.<br>Your <em style="color:#e8f2e7;">minerals</em> are.</h1>
+      <p style="font-size:17px;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 36px;line-height:1.75;">Low energy, poor recovery, brain fog, and hormonal decline aren't inevitable. For most men, they're signs of mineral imbalance — and they're fixable.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://l.bttr.to/hhZWd" target="_blank" class="btn-primary">✦ Purchase Endless Energy</a>
+        <a href="https://l.bttr.to/73Zh5" target="_blank" class="btn-secondary" style="border-color:rgba(255,255,255,.35);color:white;background:rgba(255,255,255,.12);">📞 Free Consultation</a>
+      </div>
+    </div>
+  </section>
+  <section style="background:#3D3530;padding:var(--section-pad) 0;">
+    <div class="container">
+      <h2 style="font-family:var(--font-display);font-size:clamp(24px,3.5vw,38px);color:white;text-align:center;margin-bottom:48px;">The symptoms men are <em style="color:#e8f2e7;">told to accept.</em></h2>
+      <div class="pain-grid-2">
+        <div class="pain-card"><div class="pain-emoji">📉</div><h4>Low Testosterone</h4><p>Zinc is the most critical mineral for testosterone production.</p></div>
+        <div class="pain-card"><div class="pain-emoji">😴</div><h4>Low Energy and Drive</h4><p>Iron and magnesium are central to cellular energy production.</p></div>
+        <div class="pain-card"><div class="pain-emoji">🧠</div><h4>Brain Fog and Focus</h4><p>Zinc, iodine, and magnesium all play direct roles in cognitive clarity.</p></div>
+        <div class="pain-card"><div class="pain-emoji">🏃</div><h4>Slow Recovery</h4><p>Magnesium, zinc, and selenium are essential for muscle repair.</p></div>
+        <div class="pain-card"><div class="pain-emoji">😟</div><h4>Stress and Irritability</h4><p>Elevated copper relative to zinc directly impacts mood regulation.</p></div>
+        <div class="pain-card"><div class="pain-emoji">💤</div><h4>Poor Sleep</h4><p>Magnesium is the body's natural relaxant. Low levels mean disrupted sleep.</p></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding:var(--section-pad) 0;background:#FAF5EE;">
+    <div class="container--sm u-center">
+      <div class="section-eyebrow">Ready?</div>
+      <h2 class="section-title">16 Weeks to <em>Full Power</em></h2>
+      <p class="section-lead center" style="margin-bottom:32px;">HTMA testing + personalised 16-week protocol + weekly 1:1 check-ins. Built for men who want real answers.</p>
+      <a href="https://l.bttr.to/hhZWd" target="_blank" class="btn-primary" style="font-size:17px;padding:18px 44px;">Purchase Endless Energy →</a>
+    </div>
+  </section>
+</div>
+
+<!-- RESOURCES -->
+<div id="page-resources" class="page">
+  <section style="background:linear-gradient(160deg,#e8f2e7,#F2D4C8);padding:72px 28px;text-align:center;">
+    <div class="container--sm">
+      <div class="section-eyebrow">Resources and Guides</div>
+      <h1 class="section-title">Everything you need to start <em>learning and healing</em></h1>
+    </div>
+  </section>
+  <div style="background:white;border-bottom:1px solid #e8d8c8;padding:0 20px;display:flex;overflow-x:auto;">
+    <button class="res-tab" onclick="showResTab('mineral',this)" style="flex-shrink:0;background:none;border:none;border-bottom:2.5px solid #C4856A;padding:14px 22px;font-family:var(--font-body);font-size:13px;font-weight:700;color:#C4856A;cursor:pointer;white-space:nowrap;">🔬 Mineral Guides</button>
+    <button class="res-tab" onclick="showResTab('meal',this)" style="flex-shrink:0;background:none;border:none;border-bottom:2.5px solid transparent;padding:14px 22px;font-family:var(--font-body);font-size:13px;font-weight:700;color:#9a8a7a;cursor:pointer;white-space:nowrap;">🥗 Meal Plans</button>
+    <button class="res-tab" onclick="showResTab('postpartum',this)" style="flex-shrink:0;background:none;border:none;border-bottom:2.5px solid transparent;padding:14px 22px;font-family:var(--font-body);font-size:13px;font-weight:700;color:#9a8a7a;cursor:pointer;white-space:nowrap;">🌸 Postpartum</button>
+  </div>
+  <div id="res-mineral" class="res-panel">
+    <div class="resources-grid">
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#F2D4C8,#C4856A);">🔬</div><div class="resource-body"><span class="resource-tag" style="background:#F2D4C8;color:#a06852;">Free Guide</span><h3>The Postpartum Mineral Depletion Guide</h3><p>A comprehensive overview of the 12 minerals most depleted by pregnancy and birth.</p><button class="resource-dl" style="background:#F2D4C8;color:#a06852;margin-top:auto;">⬇ Free Download</button></div></div>
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#e8f2e7,#8FAF8C);">⚡</div><div class="resource-body"><span class="resource-tag" style="background:#e8f2e7;color:#5d8c5a;">Free Guide</span><h3>The Zinc-Copper Balance Guide</h3><p>Why the zinc-copper ratio is one of the most important drivers of postpartum anxiety and hair loss.</p><button class="resource-dl" style="background:#e8f2e7;color:#5d8c5a;margin-top:auto;">▶ Read Free Guide</button></div></div>
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#F2D4C8,#a06852);">🧲</div><div class="resource-body"><span class="resource-tag" style="background:#F2D4C8;color:#a06852;">Free Guide</span><h3>Magnesium for Mamas</h3><p>How magnesium depletion drives poor sleep, muscle cramps, and postpartum anxiety.</p><button class="resource-dl" style="background:#F2D4C8;color:#a06852;margin-top:auto;">▶ Read Free Guide</button></div></div>
+    </div>
+    <div class="resources-capture">
+      <div class="section-eyebrow" style="margin-bottom:14px;">Free Guide Unlock</div>
+      <h2>Get the <em style="font-style:italic;color:#C4856A;">Zinc-Copper Guide</em> — free</h2>
+      <p style="color:#5e5048;margin-bottom:20px;font-size:15px;">Enter your email and receive instant access.</p>
+      <div class="capture-form">
+        <input class="capture-input" type="email" placeholder="your@email.com">
+        <button class="capture-btn">Get Free Guide →</button>
+      </div>
+    </div>
+  </div>
+  <div id="res-meal" class="res-panel" style="display:none;">
+    <div class="resources-grid">
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#F2D4C8,#f5ead8);">🥗</div><div class="resource-body"><span class="resource-tag" style="background:#F2D4C8;color:#a06852;">Meal Plan</span><h3>7-Day Mineral-Rich Postpartum Meal Plan</h3><p>A week of nourishing meals designed to rebuild iron, zinc, magnesium, and omega-3s.</p><div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px;border-top:1px solid #e8d8c8;"><div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#C4856A;">$7</div><button class="resource-dl" style="background:linear-gradient(135deg,#C4856A,#a06852);color:white;">Unlock Plan →</button></div></div></div>
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#e8f2e7,#8FAF8C);">🫕</div><div class="resource-body"><span class="resource-tag" style="background:#e8f2e7;color:#5d8c5a;">Meal Plan</span><h3>4-Week High Mineral Busy Mom Meal Plan</h3><p>Four weeks of mineral-dense, set-and-forget crockpot dinners with grocery lists included.</p><div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px;border-top:1px solid #e8d8c8;"><div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#5d8c5a;">$27</div><button class="resource-dl" style="background:linear-gradient(135deg,#8FAF8C,#5d8c5a);color:white;">Unlock Plan →</button></div></div></div>
+    </div>
+  </div>
+  <div id="res-postpartum" class="res-panel" style="display:none;">
+    <div class="resources-grid">
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#F2D4C8,#f5ead8);">🌸</div><div class="resource-body"><span class="resource-tag" style="background:#F2D4C8;color:#a06852;">Free Guide</span><h3>The Fourth Trimester Recovery Checklist</h3><p>A practical checklist covering nutrition, rest, minerals, and self-care for the first 12 weeks.</p><button class="resource-dl" style="background:#F2D4C8;color:#a06852;margin-top:auto;">▶ Open Checklist</button></div></div>
+      <div class="resource-card"><div class="resource-thumb" style="background:linear-gradient(135deg,#F2D4C8,#C4856A);">🍼</div><div class="resource-body"><span class="resource-tag" style="background:#F2D4C8;color:#a06852;">Free Guide</span><h3>Breastfeeding and Mineral Depletion</h3><p>How breastfeeding draws minerals from your body daily — and how to replenish strategically.</p><button class="resource-dl" style="background:#F2D4C8;color:#a06852;margin-top:auto;">▶ Read Free Guide</button></div></div>
+      <div class="resource-card" style="background:linear-gradient(135deg,#C4856A,#a06852);border:none;">
+        <div class="resource-thumb" style="background:rgba(255,255,255,.1);">✦</div>
+        <div class="resource-body"><span class="resource-tag" style="background:rgba(255,255,255,.2);color:white;">Program</span><h3 style="color:white;">Ready for a personalised recovery plan?</h3><p style="color:rgba(255,255,255,.78);">The Nourish Mama Method uses HTMA to build a 16-week precision recovery plan built around you.</p><button onclick="showPage('postpartum')" style="font-family:var(--font-body);font-size:13px;font-weight:700;background:white;color:#C4856A;border:none;border-radius:30px;padding:11px 22px;cursor:pointer;margin-top:auto;">The Nourish Mama Method →</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG -->
+<div id="page-blog" class="page">
+  <section class="blog-hero">
+    <div class="container--sm">
+      <div class="section-eyebrow">The Mineral Maven Blog</div>
+      <h1 class="section-title">Real talk on minerals,<br><em>motherhood and healing</em></h1>
+      <p class="section-lead center">Unfiltered education on HTMA, postpartum recovery, and the science behind why you feel the way you do.</p>
+    </div>
+  </section>
+  <div class="container" style="padding:40px 28px 80px;">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;">
+      <button class="blog-filter active" onclick="filterBlog('all',this)">All Posts</button>
+      <button class="blog-filter" onclick="filterBlog('htma',this)">🔬 HTMA</button>
+      <button class="blog-filter" onclick="filterBlog('postpartum',this)">🌸 Postpartum</button>
+      <button class="blog-filter" onclick="filterBlog('minerals',this)">⚡ Minerals</button>
+      <button class="blog-filter" onclick="filterBlog('recipes',this)">🥗 Recipes</button>
+    </div>
+    <div id="blogGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;"></div>
+  </div>
+  <div style="background:linear-gradient(135deg,#F2D4C8,#e8f2e7);padding:var(--section-pad) 28px;text-align:center;">
+    <div class="container--sm">
+      <div class="section-eyebrow">Never Miss a Post</div>
+      <h2 class="section-title">Get new articles <em>straight to your inbox</em></h2>
+      <div style="display:flex;gap:10px;max-width:440px;margin:24px auto 0;flex-wrap:wrap;justify-content:center;">
+        <input type="email" placeholder="your@email.com" style="flex:1;min-width:200px;font-family:var(--font-body);font-size:14px;border:1.5px solid #e8d8c8;border-radius:50px;padding:13px 22px;outline:none;background:white;">
+        <button onclick="alert('You are subscribed! 🌸')" style="font-family:var(--font-body);font-size:14px;font-weight:700;background:linear-gradient(135deg,#C4856A,#a06852);color:white;border:none;border-radius:50px;padding:13px 26px;cursor:pointer;">Subscribe →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MEAL PLAN MODAL -->
+<div id="mealPlanOverlay" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(61,53,48,.7);backdrop-filter:blur(8px);overflow-y:auto;">
+  <div style="max-width:780px;margin:32px auto;background:white;border-radius:24px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.2);position:relative;">
+    <button onclick="closeMealPlan()" style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,.9);border:none;border-radius:50%;width:36px;height:36px;font-size:18px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.12);">✕</button>
+
+    <!-- HEADER -->
+    <div style="background:linear-gradient(135deg,#5d8c5a,#8FAF8C);padding:40px 40px 32px;text-align:center;">
+      <div style="font-size:52px;margin-bottom:12px;">🫕</div>
+      <div style="display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);color:white;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:14px;">4-Week Meal Plan</div>
+      <h1 style="font-family:\'Lora\',serif;font-size:clamp(22px,3vw,32px);color:white;line-height:1.2;margin-bottom:10px;">4-Week High Mineral Busy Mom Meal Plan</h1>
+      <p style="font-size:14px;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto;">Set-and-forget crockpot dinners, mineral-rich breakfasts and snacks, and weekly grocery lists — all designed around your postpartum recovery.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px;">
+        <span style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.25);color:white;font-size:11px;font-weight:600;padding:4px 14px;border-radius:20px;">🫕 28 crockpot dinners</span>
+        <span style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.25);color:white;font-size:11px;font-weight:600;padding:4px 14px;border-radius:20px;">🛒 4 weekly grocery lists</span>
+        <span style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.25);color:white;font-size:11px;font-weight:600;padding:4px 14px;border-radius:20px;">🍕 Pizza and burger nights included</span>
+        <span style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.25);color:white;font-size:11px;font-weight:600;padding:4px 14px;border-radius:20px;">🌸 Breastfeeding-safe</span>
+      </div>
+    </div>
+
+    <div style="padding:32px 40px 40px;">
+
+      <!-- INTRO NOTE -->
+      <div style="background:#e8f2e7;border-left:4px solid #5d8c5a;border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:28px;font-size:13px;color:#3d6e3a;line-height:1.7;">
+        <strong>How this plan works:</strong> Each week follows the same simple rhythm — crockpot on in the morning, dinner ready by evening. Breakfasts and snacks are mineral-dense and require zero cooking. Every week has its own grocery list so you're never buying more than you need.
+      </div>
+
+      <!-- WEEK 1 -->
+      <div style="margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="background:linear-gradient(135deg,#F2D4C8,#C4856A);color:white;font-family:\'Lora\',serif;font-size:14px;font-weight:700;padding:6px 18px;border-radius:30px;">Week 1</div>
+          <div style="font-size:13px;color:#9a8a7a;font-weight:600;">Foundation Week — Iron and Zinc Focus</div>
+        </div>
+        <div style="display:grid;gap:10px;">
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Monday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Slow-Cooked Lamb Shoulder with Root Vegetables</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Season lamb shoulder generously with salt, pepper, garlic, and rosemary. Place in crockpot with chopped carrots, parsnip, onion, and 1 cup bone broth. Cook on low 8 hours. Serve over mashed potato. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, iron, B12, selenium.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Tuesday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Beef and Lentil Stew</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Brown 500g beef mince then add to crockpot with 1 cup red lentils, 1 can diced tomato, 2 cups beef broth, diced onion, garlic, cumin. Cook on low 6 hours. Add 2 large handfuls spinach in the last 30 minutes. <span style="color:#8FAF8C;font-weight:700;">Key minerals: iron, zinc, magnesium, folate.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Wednesday · Easy Night</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Grass-Fed Beef Burgers with Avocado</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Pan-fry or grill 150g grass-fed beef patties. Serve on sourdough with avocado, lettuce, tomato, and a fried egg on top. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, iron, choline, magnesium.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Thursday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Chicken Thigh and Sweet Potato Curry</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Add bone-in chicken thighs, 1 can coconut milk, 2 tbsp curry powder, 1 large diced sweet potato, 1 can chickpeas, garlic, ginger to crockpot. Cook 6–7 hours on low. Stir through spinach before serving over rice. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, iodine, selenium, vitamin A.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Friday · Easy Night</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Homemade Pizza Night</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Use store-bought base. Top with tomato, mozzarella, beef mince, spinach, and pumpkin seeds. The pumpkin seeds are non-negotiable — they are one of the richest food sources of zinc and magnesium. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, magnesium, iron.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Saturday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Salmon and Vegetable Chowder</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Add diced potato, corn, leek, garlic, fish stock, and cream to crockpot. Cook on low 5 hours. Add salmon fillets in the last 45 minutes. Season with dill and lemon. <span style="color:#8FAF8C;font-weight:700;">Key minerals: DHA, selenium, iodine.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;margin-bottom:6px;">Sunday · Prep Day</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Bone Broth + Roast Chicken</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Roast a whole chicken for dinner. Keep the carcass. Before bed, add carcass to crockpot with water, apple cider vinegar, onion, celery, carrot. Cook overnight on low 10–12 hours. Strain and use all week in soups, sauces, or drink warm. <span style="color:#8FAF8C;font-weight:700;">Key minerals: glycine, calcium, phosphorus, trace minerals.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEK 2 -->
+      <div style="margin-bottom:32px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="background:linear-gradient(135deg,#e8f2e7,#5d8c5a);color:white;font-family:\'Lora\',serif;font-size:14px;font-weight:700;padding:6px 18px;border-radius:30px;">Week 2</div>
+          <div style="font-size:13px;color:#9a8a7a;font-weight:600;">Magnesium and DHA Focus</div>
+        </div>
+        <div style="display:grid;gap:10px;">
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Monday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Slow-Cooker Beef Short Ribs</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Season ribs with salt, smoked paprika, garlic powder. Add to crockpot with 1 cup beef broth, onion, and 2 tbsp tomato paste. Cook on low 8 hours. Serve with mashed sweet potato and steamed broccoli. <span style="color:#8FAF8C;font-weight:700;">Key minerals: iron, zinc, B12, collagen.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Tuesday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Turkish-Style Lamb and Chickpea Stew</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Diced lamb shoulder, 1 can chickpeas, 1 can diced tomato, cumin, coriander, cinnamon, garlic, onion. Cook on low 7 hours. Serve with quinoa and a dollop of full-fat yoghurt. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, iron, magnesium, selenium.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Wednesday · Easy Night</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Sardines on Sourdough Toast</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">This one sounds humble but it is a mineral powerhouse. Sardines on thick sourdough with avocado, sliced tomato, lemon, and cracked pepper. Add a soft-boiled egg on the side. <span style="color:#8FAF8C;font-weight:700;">Key minerals: DHA, calcium, selenium, iodine, iron.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Thursday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Pork and Apple Slow Cooker</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Pork shoulder with sliced apple, onion, wholegrain mustard, apple cider vinegar, garlic, thyme. Cook on low 8 hours. Pull apart and serve over creamy mashed potato with roasted brussels sprouts. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, B vitamins, selenium.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Friday · Easy Night</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Steak and Eggs</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Pan-sear a grass-fed sirloin or rump steak. Serve with 2 fried eggs, sauteed spinach with garlic and lemon, and sourdough. Simple, fast, and one of the most mineral-dense meals you can eat. <span style="color:#8FAF8C;font-weight:700;">Key minerals: iron, zinc, B12, choline, selenium.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Saturday · Dinner</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Thai-Style Coconut Prawn Soup</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Add coconut milk, fish stock, lemongrass, ginger, garlic, fish sauce, lime, and mushrooms to crockpot. Cook 4 hours on low. Add prawns in the last 20 minutes. Serve over rice noodles with fresh coriander. <span style="color:#8FAF8C;font-weight:700;">Key minerals: iodine, zinc, selenium, DHA.</span></div>
+          </div>
+          <div style="background:#FAF5EE;border-radius:12px;padding:16px 18px;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#5d8c5a;margin-bottom:6px;">Sunday · Slow Cook</div>
+            <div style="font-weight:700;font-size:15px;color:#3D3530;margin-bottom:4px;">Whole Roast Chicken in Crockpot</div>
+            <div style="font-size:13px;color:#5e5048;line-height:1.65;">Rub whole chicken with butter, salt, paprika, garlic. Place breast-side up in crockpot on a bed of sliced onion and lemon. Cook on low 7–8 hours. The skin won't crisp but the meat is incredibly tender. Save carcass for broth. <span style="color:#8FAF8C;font-weight:700;">Key minerals: zinc, B6, niacin, selenium.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WEEKS 3 AND 4 NOTE -->
+      <div style="background:linear-gradient(135deg,#F2D4C8,#f5ead8);border-radius:16px;padding:24px;margin-bottom:28px;text-align:center;">
+        <div style="font-size:28px;margin-bottom:10px;">✦</div>
+        <h3 style="font-family:\'Lora\',serif;font-size:18px;color:#3D3530;margin-bottom:8px;">Weeks 3 and 4</h3>
+        <p style="font-size:14px;color:#5e5048;line-height:1.75;max-width:460px;margin:0 auto 16px;">Weeks 3 and 4 rotate your favourite meals from Weeks 1 and 2 based on what you enjoyed most, with two new recipes introduced each week to keep things interesting. Your full 28-day plan with grocery lists is included in the 4-Week Meal Plan download.</p>
+        <a href="https://l.bttr.to/73Zh5" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-family:\'Quicksand\',sans-serif;font-size:14px;font-weight:700;color:white;background:linear-gradient(135deg,#C4856A,#a06852);padding:14px 28px;border-radius:50px;border:none;cursor:pointer;text-decoration:none;">Get the Full Plan + Grocery Lists →</a>
+      </div>
+
+      <!-- BREAKFAST AND SNACKS -->
+      <h3 style="font-family:\'Lora\',serif;font-size:20px;color:#3D3530;margin-bottom:14px;">Every Day: Breakfasts and Snacks</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;">
+        <div style="background:#FAF5EE;border-radius:12px;padding:14px 16px;">
+          <div style="font-weight:700;font-size:14px;color:#3D3530;margin-bottom:4px;">🥚 Mineral Breakfast Bowl</div>
+          <div style="font-size:12px;color:#5e5048;line-height:1.6;">2 whole eggs scrambled with spinach, served with 2 Brazil nuts and half an avocado. Covers selenium, choline, DHA, magnesium, and iron in one meal.</div>
+        </div>
+        <div style="background:#FAF5EE;border-radius:12px;padding:14px 16px;">
+          <div style="font-weight:700;font-size:14px;color:#3D3530;margin-bottom:4px;">🌰 Power Snack</div>
+          <div style="font-size:12px;color:#5e5048;line-height:1.6;">Pumpkin seeds, dark chocolate (70%+), and a handful of blueberries. The most mineral-dense snack you can make in 30 seconds.</div>
+        </div>
+        <div style="background:#FAF5EE;border-radius:12px;padding:14px 16px;">
+          <div style="font-weight:700;font-size:14px;color:#3D3530;margin-bottom:4px;">🍳 Quick Lunch</div>
+          <div style="font-size:12px;color:#5e5048;line-height:1.6;">Leftover crockpot dinner reheated. This plan is designed so you always have leftovers — no separate lunch cooking required.</div>
+        </div>
+        <div style="background:#FAF5EE;border-radius:12px;padding:14px 16px;">
+          <div style="font-weight:700;font-size:14px;color:#3D3530;margin-bottom:4px;">☕ Morning Non-Negotiable</div>
+          <div style="font-size:12px;color:#5e5048;line-height:1.6;">Warm bone broth with a pinch of salt before your first coffee. One cup replaces a significant amount of glycine and trace minerals lost overnight.</div>
+        </div>
+      </div>
+
+      <!-- SCOPE NOTE -->
+      <div style="background:#FAF5EE;border-radius:12px;padding:14px 16px;font-size:11px;color:#9a8a7a;line-height:1.65;">
+        <strong style="color:#5e5048;">Nutritional and wellness education only.</strong> This meal plan is not medical advice and is not a substitute for personalised care. Consult your healthcare provider before making significant dietary changes, particularly if you have a diagnosed condition or are taking medication. For a meal plan built specifically around your HTMA results, see <span style="color:#C4856A;cursor:pointer;" onclick="closeMealPlan();showPage(\'postpartum\')">The Nourish Mama Method</span>.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="blog-post-overlay" id="blogPostOverlay">
+  <div class="blog-post-inner">
+    <button class="blog-post-close" onclick="closeBlogPost()">✕</button>
+    <div class="blog-post-content" id="blogPostContent"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="page-contact" class="page">
+  <section style="background:linear-gradient(160deg,#FAF5EE,#F2D4C8);padding:72px 28px;text-align:center;">
+    <div class="container--sm">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h1 class="section-title">Let's talk about your <em>recovery</em></h1>
+    </div>
+  </section>
+  <div class="contact-layout">
+    <div>
+      <h2 style="font-family:var(--font-display);font-size:28px;color:#3D3530;margin-bottom:16px;">I'd love to hear from you</h2>
+      <p style="font-size:15px;color:#5e5048;line-height:1.8;margin-bottom:24px;">Every journey to recovery starts with a conversation. Reach out — no pressure, just a genuine chat.</p>
+      <div class="contact-method"><div class="cm-icon">📸</div><div><div class="cm-label">Instagram</div><div class="cm-val">@mineralmaven_</div></div></div>
+      <div class="contact-method"><div class="cm-icon">📧</div><div><div class="cm-label">Email</div><div class="cm-val">hello@mineralmaven.com</div></div></div>
+      <div class="contact-method"><div class="cm-icon">📞</div><div><div class="cm-label">Discovery Call</div><div class="cm-val"><a href="https://l.bttr.to/73Zh5" target="_blank" style="color:#3D3530;text-decoration:underline;text-underline-offset:3px;">Book a free consultation →</a></div></div></div>
+      <a href="https://instagram.com/mineralmaven_" target="_blank" class="btn-primary" style="display:inline-flex;margin-top:8px;">DM me on Instagram →</a>
+    </div>
+    <div class="contact-form-wrap">
+      <h3>Send a message</h3>
+      <div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" placeholder="First name"></div>
+      <div class="form-group"><label class="form-label">Email Address</label><input class="form-input" type="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label class="form-label">I'm interested in...</label><select class="form-select"><option>The Nourish Mama Method</option><option>The Endless Energy Program</option><option>A Discovery Call</option><option>Digital Resources</option><option>General Question</option></select></div>
+      <div class="form-group"><label class="form-label">Tell me a little about where you're at</label><textarea class="form-textarea" placeholder="What symptoms are you experiencing?"></textarea></div>
+      <button class="form-submit" onclick="alert('Thank you! Jenifer will be in touch within 24 hours. 🌸')">Send Message →</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="page-quiz" class="page">
+  <section class="quiz-page-hero">
+    <div class="container--sm">
+      <div class="section-eyebrow" style="color:#F2D4C8;background:rgba(255,255,255,.16);">Free Mineral Depletion Quiz</div>
+      <h1>Are You Mineral<br><em>Depleted?</em></h1>
+      <p style="color:rgba(250,245,238,.78);font-size:17px;max-width:540px;margin:0 auto 32px;">Take the free quiz — get your personalised mineral depletion score instantly.</p>
+      <div><span class="quiz-meta-pill">2 minutes</span><span class="quiz-meta-pill">8 questions</span><span class="quiz-meta-pill">Free results</span></div>
+    </div>
+  </section>
+  <div class="quiz-shell">
+    <div id="quizProgressWrap" style="padding:32px 0 0;">
+      <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:#9a8a7a;margin-bottom:10px;"><span id="quizProgressLabel">Question 1 of 8</span><span id="quizProgressPct">0% complete</span></div>
+      <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quizProgressFill" style="width:0%;"></div></div>
+    </div>
+    <div id="quizQuestions">
+      <div class="quiz-card" id="q1"><div class="quiz-q-num">Question 1 of 8</div><div class="quiz-q-icon">😴</div><div class="quiz-q-text">How would you describe your energy levels right now?</div><div class="quiz-q-sub">Think about your typical day.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>I feel great — energy is solid most of the day</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>Mild afternoon dips, but generally okay</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Tired most of the day, even after sleep</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Bone-tired almost constantly</button></div><div class="quiz-nav"><span></span><button class="quiz-next-btn" id="nextBtn1" onclick="nextQ(1)">Next →</button></div></div>
+      <div class="quiz-card" id="q2" style="display:none;"><div class="quiz-q-num">Question 2 of 8</div><div class="quiz-q-icon">🦱</div><div class="quiz-q-text">Have you noticed changes in your hair since giving birth?</div><div class="quiz-q-sub">Postpartum hair shedding is a clear sign of mineral depletion.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>No noticeable change</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>A little more shedding than usual</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Significant shedding — noticeable in shower and on pillows</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Severe loss — visible thinning or bald patches</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(2)">Back</button><button class="quiz-next-btn" id="nextBtn2" onclick="nextQ(2)">Next →</button></div></div>
+      <div class="quiz-card" id="q3" style="display:none;"><div class="quiz-q-num">Question 3 of 8</div><div class="quiz-q-icon">😟</div><div class="quiz-q-text">How has your mood and anxiety been since birth?</div><div class="quiz-q-sub">Mineral imbalances directly affect mood regulation.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>Mood is stable — I feel grounded</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>Some mood swings, but manageable</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Noticeable anxiety or irritability most days</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Significant anxiety, tearfulness, or overwhelm regularly</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(3)">Back</button><button class="quiz-next-btn" id="nextBtn3" onclick="nextQ(3)">Next →</button></div></div>
+      <div class="quiz-card" id="q4" style="display:none;"><div class="quiz-q-num">Question 4 of 8</div><div class="quiz-q-icon">🧠</div><div class="quiz-q-text">Are you experiencing brain fog or difficulty concentrating?</div><div class="quiz-q-sub">DHA, choline, iron, and iodine all play key roles postpartum.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>No — my thinking is clear</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>Occasionally forget things</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Regular brain fog — hard to concentrate</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Severe — can barely form sentences some days</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(4)">Back</button><button class="quiz-next-btn" id="nextBtn4" onclick="nextQ(4)">Next →</button></div></div>
+      <div class="quiz-card" id="q5" style="display:none;"><div class="quiz-q-num">Question 5 of 8</div><div class="quiz-q-icon">🍼</div><div class="quiz-q-text">Are you breastfeeding, and how is your supply?</div><div class="quiz-q-sub">Breastfeeding significantly increases your mineral needs.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>Not breastfeeding</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>Breastfeeding with a strong, consistent supply</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Breastfeeding but noticing supply dips</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Struggling significantly with supply</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(5)">Back</button><button class="quiz-next-btn" id="nextBtn5" onclick="nextQ(5)">Next →</button></div></div>
+      <div class="quiz-card" id="q6" style="display:none;"><div class="quiz-q-num">Question 6 of 8</div><div class="quiz-q-icon">🩺</div><div class="quiz-q-text">Have you experienced physical symptoms since giving birth?</div><div class="quiz-q-sub">Select the option that best describes your experience.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>None — I feel physically well</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>Occasional muscle cramps, headaches, or poor sleep</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Regular muscle cramps, joint pain, or disrupted sleep</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Multiple symptoms daily</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(6)">Back</button><button class="quiz-next-btn" id="nextBtn6" onclick="nextQ(6)">Next →</button></div></div>
+      <div class="quiz-card" id="q7" style="display:none;"><div class="quiz-q-num">Question 7 of 8</div><div class="quiz-q-icon">🥗</div><div class="quiz-q-text">How would you describe your diet postpartum?</div><div class="quiz-q-sub">Diet quality impacts your mineral replenishment capacity.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>Mostly whole foods — plenty of variety</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>Pretty good, but I skip meals sometimes</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>Inconsistent — some good days, some survival days</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>Mostly convenience food — no time or energy to cook</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(7)">Back</button><button class="quiz-next-btn" id="nextBtn7" onclick="nextQ(7)">Next →</button></div></div>
+      <div class="quiz-card" id="q8" style="display:none;"><div class="quiz-q-num">Question 8 of 8</div><div class="quiz-q-icon">📅</div><div class="quiz-q-text">How many months postpartum are you?</div><div class="quiz-q-sub">This helps personalise your results.</div><div class="quiz-options"><button class="quiz-opt" onclick="selectOpt(this,0)"><span class="quiz-opt-dot"></span>Pregnant or less than 6 weeks postpartum</button><button class="quiz-opt" onclick="selectOpt(this,1)"><span class="quiz-opt-dot"></span>6 weeks to 6 months postpartum</button><button class="quiz-opt" onclick="selectOpt(this,2)"><span class="quiz-opt-dot"></span>6 months to 18 months postpartum</button><button class="quiz-opt" onclick="selectOpt(this,3)"><span class="quiz-opt-dot"></span>18 months or more postpartum</button></div><div class="quiz-nav"><button class="quiz-back-btn" onclick="prevQ(8)">Back</button><button class="quiz-next-btn" id="nextBtn8" onclick="showEmailGate()">See My Results →</button></div></div>
+    </div>
+    <div id="quizEmailGate" style="display:none;">
+      <div class="quiz-email-gate">
+        <div class="quiz-gate-icon">📬</div>
+        <h2 class="quiz-gate-title">Your results are <em>ready!</em></h2>
+        <p class="quiz-gate-sub">Enter your name and email to receive your personalised mineral depletion score and a 5-part recovery email series.</p>
+        <div class="quiz-gate-form">
+          <input class="quiz-gate-input" id="gateFirstName" type="text" placeholder="Your first name">
+          <input class="quiz-gate-input" id="gateEmail" type="email" placeholder="Your best email address">
+          <button class="quiz-gate-submit" onclick="submitQuiz()">Show Me My Results →</button>
+          <p style="font-size:11px;color:#9a8a7a;">No spam, ever.</p>
+        </div>
+      </div>
+    </div>
+    <div id="quizResults" style="display:none;">
+      <div class="result-card">
+        <div id="resultBadge" class="result-badge"></div>
+        <div class="result-score-ring"><div class="result-score-num" id="resultScoreNum">-</div><div class="result-score-label" id="resultScoreLbl">score</div></div>
+        <h2 class="result-title" id="resultTitle"></h2>
+        <p class="result-desc" id="resultDesc"></p>
+        <div class="result-minerals"><div class="result-minerals-title">Your likely mineral priorities</div><div id="mineralBars"></div></div>
+        <div class="result-sequence"><div class="result-sequence-title">Your free email recovery series</div><div id="seqEmails"></div></div>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
+          <button class="btn-primary" onclick="showPage('postpartum')">Explore The Nourish Mama Method →</button>
+          <button class="result-retake" onclick="resetQuiz()">Retake Quiz</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#F2D4C8,#C4856A);display:flex;align-items:center;justify-content:center;font-size:18px;">🌸</div>
+        <div><div style="font-family:var(--font-display);font-size:18px;font-weight:600;color:#F2D4C8;">Mineral Maven</div><span style="font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:rgba(250,245,238,.45);">Jenifer Allen</span></div>
+      </div>
+      <p class="footer-tagline">Helping postpartum mamas restore their minerals and come back to themselves — through The Nourish Mama Method.</p>
+      <a class="footer-ig" href="https://instagram.com/mineralmaven_" target="_blank">@mineralmaven_</a>
+    </div>
+    <div class="footer-col"><h4>Navigate</h4><ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('about')">About Jenifer</a></li>
+      <li><a onclick="showPage('postpartum')">Nourish Mama Method</a></li>
+      <li><a onclick="showPage('men')">Endless Energy</a></li>
+      <li><a onclick="showPage('quiz')">Free Quiz</a></li>
+      <li><a onclick="showPage('resources')">Resources</a></li>
+      <li><a onclick="showPage('blog')">Blog</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Programs</h4><ul>
+      <li><a onclick="showPage('postpartum')">Nourish Mama Method</a></li>
+      <li><a onclick="showPage('men')">Endless Energy — Men</a></li>
+      <li><a onclick="showPage('contact')">Apply Now</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Free Resources</h4><ul>
+      <li><a onclick="showPage('quiz')">Mineral Depletion Quiz</a></li>
+      <li><a onclick="showPage('resources')">Mineral Guides</a></li>
+      <li><a onclick="showPage('blog')">Blog</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>2025 Mineral Maven · Jenifer Allen. All rights reserved.</span>
+    <span>Nutritional and wellness coaching only — not medical advice, diagnosis, or treatment. Always consult your healthcare provider.</span>
+  </div>
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  var t = document.getElementById('page-' + id);
+  if (t) t.classList.add('active');
+  document.getElementById('mobileNav').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleFaq(btn) {
+  var item = btn.closest('.faq-item');
+  var wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+  if (!wasOpen) item.classList.add('open');
+}
+
+function openPortalLogin() { document.getElementById('portalOverlay').classList.add('visible'); }
+function closePortal() { document.getElementById('portalOverlay').classList.remove('visible'); }
+function attemptLogin() {
+  var e = document.getElementById('loginEmail').value;
+  var p = document.getElementById('loginPassword').value;
+  if (e === 'jenifer@mineralmaven.com' && p === 'nourish2025') { closePortal(); alert('Welcome! (Demo mode)'); }
+  else { document.getElementById('loginError').style.display = 'block'; }
+}
+
+function showResTab(id, btn) {
+  document.querySelectorAll('.res-panel').forEach(function(p) { p.style.display = 'none'; });
+  document.querySelectorAll('.res-tab').forEach(function(t) { t.style.borderBottomColor = 'transparent'; t.style.color = '#9a8a7a'; });
+  document.getElementById('res-' + id).style.display = 'block';
+  btn.style.borderBottomColor = '#C4856A';
+  btn.style.color = '#C4856A';
+}
+
+var POSTS = [
+  { id: 'htma', cat: 'htma', emoji: '🔬', bg: 'linear-gradient(135deg,#e8eef8,#8fafd8)', tag: 'HTMA', title: 'Why Your Blood Tests Keep Coming Back Normal', excerpt: 'Blood tests are designed to detect disease, not depletion. HTMA reveals what is happening at the cellular level long before things get bad enough to show up on a standard panel.', date: 'May 12, 2025', read: '7 min read' },
+  { id: 'zinc', cat: 'minerals', emoji: '⚡', bg: 'linear-gradient(135deg,#F2D4C8,#C4856A)', tag: 'Minerals', title: 'The Zinc-Copper Imbalance Nobody Talks About', excerpt: 'High copper and low zinc is one of the most common drivers of postpartum anxiety, rage, and mood swings. Here is why it happens and what to do.', date: 'May 19, 2025', read: '5 min read' },
+  { id: 'hair', cat: 'postpartum', emoji: '🦱', bg: 'linear-gradient(135deg,#F2D4C8,#f5ead8)', tag: 'Postpartum', title: 'Postpartum Hair Loss: What Is Actually Happening', excerpt: 'Losing handfuls of hair in the shower is one of the most alarming postpartum symptoms. There is a mineral story here, and it is fixable.', date: 'May 5, 2025', read: '6 min read' },
+  { id: 'magnesium', cat: 'minerals', emoji: '🧲', bg: 'linear-gradient(135deg,#e8f2e7,#8FAF8C)', tag: 'Minerals', title: 'Magnesium: The Mineral You Are Almost Certainly Deficient In', excerpt: 'Magnesium is involved in over 300 enzymatic reactions. Most postpartum women are severely depleted and it is driving poor sleep, anxiety, and muscle cramps.', date: 'April 28, 2025', read: '5 min read' },
+  { id: 'crockpot', cat: 'recipes', emoji: '🫕', bg: 'linear-gradient(135deg,#e8f2e7,#f5ead8)', tag: 'Recipes', title: '5 High-Mineral Crockpot Meals for Exhausted Mamas', excerpt: 'Set it before naptime, eat it for dinner. These five mineral-dense crockpot meals are simple, affordable, and genuinely nourishing for the postpartum body.', date: 'April 14, 2025', read: '4 min read' },
+  { id: 'mombrain', cat: 'postpartum', emoji: '🧠', bg: 'linear-gradient(135deg,#e8e4f8,#8a7abf)', tag: 'Postpartum', title: 'Mom Brain Is Real And It Is Not Just Sleep Deprivation', excerpt: 'The cognitive changes of new motherhood are measurable, biological, and have specific nutritional causes. Here is what is actually happening in your brain postpartum.', date: 'April 2, 2025', read: '6 min read' },
+];
+
+var POST_CONTENT = {
+  htma: '<div style="font-size:48px;margin-bottom:16px;">🔬</div><h1>Why Your Blood Tests Keep Coming Back Normal</h1><div style="font-size:12px;color:#9a8a7a;margin-bottom:28px;">Jenifer Allen · May 12, 2025 · 7 min read</div><p>You have been to your GP. You have had blood tests. They have come back normal. And yet you feel exhausted, anxious, foggy, and nowhere near yourself. You are not making it up.</p><p>Blood tests measure what is circulating in your serum — a snapshot of what is in transit. Your body is extraordinarily good at keeping serum levels stable, often by drawing from tissue stores. By the time a deficiency shows up in blood, your tissues have been depleted for months or years.</p><div class="highlight">HTMA measures mineral content in the hair shaft — a 3-month record of what your cells have actually been storing and using. It catches depletion patterns long before serum levels drop.</div><p>HTMA also reveals mineral ratios that blood tests do not attempt to measure — like the zinc-copper ratio, the calcium-magnesium ratio, and the sodium-potassium ratio. These ratios tell us more about your hormonal, adrenal, and thyroid function than individual markers ever could.</p><button onclick="closeBlogPost();showPage(\'quiz\')" class="btn-primary" style="margin-top:8px;">Take the Free Quiz</button>',
+  zinc: '<div style="font-size:48px;margin-bottom:16px;">⚡</div><h1>The Zinc-Copper Imbalance Nobody Talks About</h1><div style="font-size:12px;color:#9a8a7a;margin-bottom:28px;">Jenifer Allen · May 19, 2025 · 5 min read</div><p>Pregnancy causes a dramatic rise in copper — this is well established and intentional. Copper is essential for fetal neurological development, collagen synthesis, and placental function. What is less discussed is what happens postpartum, when copper levels do not always normalise quickly, particularly in women who are simultaneously zinc-depleted.</p><p>Within functional and HTMA-focused medicine, an elevated copper-to-zinc ratio is frequently observed alongside postpartum anxiety, mood instability, and emotional dysregulation. This connection is not yet widely recognised in conventional medicine — so if you raise it with your OB or GP and get a blank look, that is normal. It does not mean the pattern is not real. It means it is operating in a space where the research is still catching up to clinical observation.</p><div class="highlight">HTMA practitioners consistently see this pattern. The theory is that elevated copper may influence neurotransmitter activity — particularly dopamine and noradrenaline pathways — in ways that amplify anxiety and emotional flooding. It is directional, not diagnostic, and your protocol will always be built around your individual results.</div><p>What is not contested: zinc is critical for hormonal regulation, immune function, and neurotransmitter balance. And zinc is consistently depleted by pregnancy, breastfeeding, stress, and poor sleep. Rebuilding zinc is a safe, evidence-supported place to start regardless of where you land on the copper question.</p><button onclick="closeBlogPost();showPage(\'quiz\')" class="btn-primary" style="margin-top:8px;">Take the Free Quiz</button>',
+  hair: '<div style="font-size:48px;margin-bottom:16px;">🦱</div><h1>Postpartum Hair Loss: What Is Actually Happening</h1><div style="font-size:12px;color:#9a8a7a;margin-bottom:28px;">Jenifer Allen · May 5, 2025 · 6 min read</div><p>Around 3–6 months postpartum, many women start losing alarming amounts of hair. The hormonal explanation is real but incomplete. The severity of shedding is directly determined by your mineral status.</p><h3>The three minerals at the root of postpartum shedding</h3><p><strong>Iron (ferritin):</strong> Delivers oxygen to hair follicle matrix cells. When ferritin falls below 40–70ng/mL, follicles shift to the shedding phase prematurely.</p><p><strong>Zinc:</strong> Required for the cell division that builds the hair shaft. Severely depleted by both pregnancy and breastfeeding.</p><p><strong>Selenium:</strong> Protects follicle cells from oxidative damage and is essential for thyroid conversion.</p><div class="highlight-sage">The single most impactful thing you can do today: request a ferritin test and ask for the actual number. If it is below 70 ng/mL, iron bisglycinate supplementation is almost certainly warranted.</div><button onclick="closeBlogPost();showPage(\'quiz\')" class="btn-primary" style="margin-top:8px;">Take the Free Quiz</button>',
+  magnesium: '<div style="font-size:48px;margin-bottom:16px;">🧲</div><h1>Magnesium: The Mineral You Are Almost Certainly Deficient In</h1><div style="font-size:12px;color:#9a8a7a;margin-bottom:28px;">Jenifer Allen · April 28, 2025 · 5 min read</div><p>Magnesium is the body\'s natural relaxant. It activates GABA — your primary calming neurotransmitter. It is required for deep sleep, muscle recovery, blood sugar regulation, and hundreds of other processes.</p><p>Postpartum, magnesium is depleted through breastfeeding, cortisol, poor sleep, and inadequate diet. The cruel loop: low magnesium worsens anxiety and sleep, which raises cortisol, which depletes more magnesium.</p><h3>How to replenish</h3><p>Magnesium glycinate is the best-absorbed, gentlest form. 300–400mg elemental magnesium taken 30–60 minutes before sleep is the highest-impact nightly habit you can start tonight. Food sources: pumpkin seeds, spinach, dark chocolate (70% or higher), and avocado.</p><button onclick="closeBlogPost();showPage(\'quiz\')" class="btn-primary" style="margin-top:8px;">Take the Free Quiz</button>',
+  crockpot: '<div style="font-size:48px;margin-bottom:16px;">🫕</div><h1>5 High-Mineral Crockpot Meals for Exhausted Mamas</h1><div style="font-size:12px;color:#9a8a7a;margin-bottom:28px;">Jenifer Allen · April 14, 2025 · 4 min read</div><p>Toss things in during naptime, walk away, eat dinner. These five meals are mineral-dense, affordable, and genuinely simple.</p><div class="recipe-box"><h4>1. Slow-Cooked Lamb Shoulder with Root Vegetables</h4><p>Rich in zinc, iron, B12, and selenium. Season lamb with garlic, rosemary, salt. Add carrots, parsnip, and bone broth. 8 hours on low.</p></div><div class="recipe-box"><h4>2. Beef and Lentil Stew</h4><p>Beef mince plus red lentils plus diced tomato plus spinach. Iron and zinc from beef, folate and magnesium from lentils. 6 hours on low.</p></div><div class="recipe-box"><h4>3. Chicken Thigh and Sweet Potato Curry</h4><p>Dark chicken thighs, coconut milk, curry powder, sweet potato, spinach. 6–7 hours on low.</p></div><div class="recipe-box"><h4>4. Salmon and Vegetable Chowder</h4><p>Salmon for DHA and selenium. Potato, corn, leek, and cream. Add salmon in the last 45 minutes.</p></div><div class="recipe-box"><h4>5. Slow Cooker Bone Broth Soup</h4><p>Chicken frames or beef bones, apple cider vinegar, vegetables. 12–24 hours on low. Strain and drink as a mineral-rich broth or use as a soup base.</p></div><button onclick="closeBlogPost();showPage(\'resources\')" class="btn-primary" style="margin-top:8px;">See the Full 4-Week Meal Plan</button>',
+  mombrain: '<div style="font-size:48px;margin-bottom:16px;">🧠</div><h1>Mom Brain Is Real And It Is Not Just Sleep Deprivation</h1><div style="font-size:12px;color:#9a8a7a;margin-bottom:28px;">Jenifer Allen · April 2, 2025 · 6 min read</div><p>Research has confirmed that pregnancy causes measurable reductions in grey matter volume in specific brain regions — changes that persist for at least two years postpartum. This is not a personality flaw. It is targeted neurological remodelling at a significant metabolic cost.</p><h3>DHA: the brain\'s structural fat</h3><p>Your brain is 60% fat. DHA is its dominant structural component. The fetal brain draws DHA throughout all three trimesters, and breast milk is rich in DHA — every feed depletes maternal tissue stores further. Supplementing 500–1000mg DHA daily is one of the highest-impact actions you can take for cognitive recovery.</p><h3>Choline: the memory neurotransmitter precursor</h3><p>Choline makes acetylcholine — your primary memory and focus neurotransmitter. 90% of postpartum women do not consume adequate choline. Two whole eggs daily provides around 294mg. It is the simplest, most affordable brain-recovery intervention available.</p><button onclick="closeBlogPost();showPage(\'quiz\')" class="btn-primary" style="margin-top:8px;">Take the Free Quiz</button>',
+};
+
+function renderBlogGrid(filter) {
+  var grid = document.getElementById('blogGrid');
+  if (!grid) return;
+  var posts = filter === 'all' ? POSTS : POSTS.filter(function(p) { return p.cat === filter; });
+  grid.innerHTML = posts.map(function(p) {
+    return '<div class="blog-card" onclick="openBlogPost(\'' + p.id + '\')">' +
+      '<div class="blog-card-thumb" style="background:' + p.bg + ';">' + p.emoji + '</div>' +
+      '<div class="blog-card-body">' +
+        '<span class="blog-tag">' + p.tag + '</span>' +
+        '<h3>' + p.title + '</h3>' +
+        '<p>' + p.excerpt + '</p>' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid #e8d8c8;">' +
+          '<div class="blog-meta">' + p.date + ' · ' + p.read + '</div>' +
+          '<span style="font-size:12px;font-weight:700;color:#C4856A;">Read →</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function filterBlog(cat, btn) {
+  document.querySelectorAll('.blog-filter').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderBlogGrid(cat);
+}
+
+function openBlogPost(id) {
+  var content = POST_CONTENT[id];
+  if (!content) return;
+  document.getElementById('blogPostContent').innerHTML = content;
+  document.getElementById('blogPostOverlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function openMealPlan() {
+  document.getElementById('mealPlanOverlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeMealPlan() {
+  document.getElementById('mealPlanOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function closeBlogPost() {
+  document.getElementById('blogPostOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+var quizAnswers = [null,null,null,null,null,null,null,null];
+var TOTAL_Q = 8;
+
+function updateProgress(q) {
+  var pct = Math.round(((q - 1) / TOTAL_Q) * 100);
+  document.getElementById('quizProgressFill').style.width = pct + '%';
+  document.getElementById('quizProgressLabel').textContent = 'Question ' + q + ' of ' + TOTAL_Q;
+  document.getElementById('quizProgressPct').textContent = pct + '% complete';
+}
+
+function selectOpt(btn, score) {
+  var card = btn.closest('.quiz-card');
+  card.querySelectorAll('.quiz-opt').forEach(function(o) { o.classList.remove('selected'); o.querySelector('.quiz-opt-dot').textContent = ''; });
+  btn.classList.add('selected');
+  btn.querySelector('.quiz-opt-dot').textContent = '✓';
+  quizAnswers[parseInt(card.id.replace('q', '')) - 1] = score;
+  card.querySelector('.quiz-next-btn').classList.add('enabled');
+}
+
+function showQ(n) {
+  document.querySelectorAll('.quiz-card').forEach(function(c) { c.style.display = 'none'; });
+  var card = document.getElementById('q' + n);
+  if (card) card.style.display = 'block';
+  updateProgress(n);
+}
+
+function nextQ(n) { if (quizAnswers[n - 1] !== null && n < TOTAL_Q) showQ(n + 1); }
+function prevQ(n) { if (n > 1) showQ(n - 1); }
+
+function showEmailGate() {
+  if (quizAnswers[TOTAL_Q - 1] === null) return;
+  document.getElementById('quizQuestions').style.display = 'none';
+  document.getElementById('quizProgressWrap').style.display = 'none';
+  document.getElementById('quizEmailGate').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function calcScore() {
+  var w = [1.2,1.1,1.2,1.0,0.8,1.0,0.9,0.6];
+  var raw = 0, maxRaw = 0;
+  quizAnswers.forEach(function(a, i) { var wt = w[i] || 1; raw += (a || 0) * wt; maxRaw += 3 * wt; });
+  return Math.round((raw / maxRaw) * 100);
+}
+
+function getResult(score) {
+  if (score <= 20) return { badge: 'Minimal Depletion', badgeBg: '#e8f2e7', badgeColor: '#5d8c5a', ringColor: '#8FAF8C', title: 'You are in pretty good shape for now.', desc: 'Your symptoms suggest minimal mineral depletion.', minerals: [{n:'Iron',v:88},{n:'Zinc',v:82},{n:'Magnesium',v:85},{n:'Iodine',v:79},{n:'Selenium',v:80}], barColor: 'linear-gradient(90deg,#e8f2e7,#8FAF8C)', sequence: [{day:'Day 1',subj:'Your Mineral Score',body:'Your score and 3 easy wins to maintain great mineral health.'},{day:'Day 4',subj:'Top 5 Minerals Every Postpartum Mama Needs',body:'How to get them from food first.'},{day:'Day 9',subj:'Is HTMA Right for You?',body:'When testing is worth it and what it would reveal.'}] };
+  if (score <= 45) return { badge: 'Mild Depletion', badgeBg: '#F2D4C8', badgeColor: '#C4856A', ringColor: '#C4856A', title: 'Mild depletion — your body is sending signals.', desc: 'Your results indicate mild but real mineral depletion.', minerals: [{n:'Iron',v:58},{n:'Zinc',v:52},{n:'Magnesium',v:61},{n:'Iodine',v:55},{n:'Selenium',v:64}], barColor: 'linear-gradient(90deg,#F2D4C8,#C4856A)', sequence: [{day:'Day 1',subj:'Your Mild Depletion Score',body:'What your score means and the best thing to do today.'},{day:'Day 4',subj:'Top 5 Mineral-Rich Foods',body:'Specific food swaps to start rebuilding immediately.'},{day:'Day 9',subj:'Is It Time for HTMA?',body:'Why guessing can make things worse.'}] };
+  if (score <= 70) return { badge: 'Moderate Depletion', badgeBg: '#f5ead8', badgeColor: '#C9A96E', ringColor: '#C9A96E', title: 'Moderate depletion — you need more than rest.', desc: 'Your score suggests significant mineral depletion driving your symptoms.', minerals: [{n:'Iron',v:32},{n:'Zinc',v:28},{n:'Magnesium',v:38},{n:'Iodine',v:30},{n:'Selenium',v:35}], barColor: 'linear-gradient(90deg,#f5ead8,#C9A96E)', sequence: [{day:'Day 1',subj:'Your Results: Moderate Depletion',body:'What to do in the next 48 hours.'},{day:'Day 3',subj:'Your Immediate Mineral Recovery Food Plan',body:'A full day of eating for your symptom profile.'},{day:'Day 8',subj:'The Nourish Mama Method',body:'What your 16-week recovery could look like.'}] };
+  return { badge: 'Significant Depletion', badgeBg: '#F2D4C8', badgeColor: '#C4856A', ringColor: '#C4856A', title: 'Significant depletion — your body is deeply depleted.', desc: 'What you are experiencing is not weakness — it is a very real physiological state.', minerals: [{n:'Iron',v:14},{n:'Zinc',v:11},{n:'Magnesium',v:18},{n:'Iodine',v:12},{n:'Selenium',v:16}], barColor: 'linear-gradient(90deg,#F2D4C8,#C4856A)', sequence: [{day:'Day 1',subj:'Your Results: Significant Depletion',body:'You are not broken. You are depleted. Your urgent first steps.'},{day:'Day 3',subj:'Emergency Mineral Food Protocol',body:'Simple meals chosen for your symptom profile.'},{day:'Day 7',subj:'The Nourish Mama Method',body:'At this level, HTMA ends the guesswork for good.'}] };
+}
+
+function submitQuiz() {
+  var name = document.getElementById('gateFirstName').value.trim();
+  var email = document.getElementById('gateEmail').value.trim();
+  if (!name || !email || email.indexOf('@') < 0) { alert('Please enter your name and a valid email.'); return; }
+  document.getElementById('quizEmailGate').style.display = 'none';
+  document.getElementById('quizResults').style.display = 'block';
+  var score = calcScore();
+  var res = getResult(score);
+  document.getElementById('resultScoreNum').textContent = score;
+  document.getElementById('resultScoreNum').style.color = res.ringColor;
+  var badge = document.getElementById('resultBadge');
+  badge.textContent = res.badge;
+  badge.style.background = res.badgeBg;
+  badge.style.color = res.badgeColor;
+  document.getElementById('resultTitle').textContent = res.title;
+  document.getElementById('resultDesc').textContent = res.desc;
+  var barsEl = document.getElementById('mineralBars');
+  barsEl.innerHTML = '';
+  res.minerals.forEach(function(m) {
+    var row = document.createElement('div');
+    row.className = 'mineral-bar-row';
+    row.innerHTML = '<div class="mineral-bar-label">' + m.n + '</div><div class="mineral-bar-track"><div class="mineral-bar-fill" data-target="' + m.v + '" style="background:' + res.barColor + ';width:0%;"></div></div><div class="mineral-bar-val">' + m.v + '%</div>';
+    barsEl.appendChild(row);
+  });
+  setTimeout(function() {
+    barsEl.querySelectorAll('.mineral-bar-fill').forEach(function(b) { b.style.width = b.getAttribute('data-target') + '%'; });
+  }, 300);
+  var seqEl = document.getElementById('seqEmails');
+  seqEl.innerHTML = '';
+  res.sequence.forEach(function(e) {
+    var row = document.createElement('div');
+    row.className = 'seq-email-row';
+    row.innerHTML = '<div class="seq-email-day">' + e.day + '</div><div class="seq-email-body"><h4>' + e.subj + '</h4><p>' + e.body + '</p></div>';
+    seqEl.appendChild(row);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function resetQuiz() {
+  quizAnswers = [null,null,null,null,null,null,null,null];
+  document.getElementById('quizResults').style.display = 'none';
+  document.getElementById('quizEmailGate').style.display = 'none';
+  document.getElementById('quizQuestions').style.display = 'block';
+  document.getElementById('quizProgressWrap').style.display = 'block';
+  document.querySelectorAll('.quiz-opt').forEach(function(o) { o.classList.remove('selected'); o.querySelector('.quiz-opt-dot').textContent = ''; });
+  document.querySelectorAll('.quiz-next-btn').forEach(function(b) { b.classList.remove('enabled'); });
+  showQ(1);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateProgress(1);
+  renderBlogGrid('all');
+  window.addEventListener('scroll', function() {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  var hamburger = document.getElementById('hamburgerBtn');
+  var mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    mobileNav.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e) {
+    if (mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && e.target !== hamburger) {
+      mobileNav.classList.remove('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
