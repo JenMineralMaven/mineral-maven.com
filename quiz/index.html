@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Are You Mineral Depleted? Free Quiz · Mineral Maven</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;scroll-behavior:smooth;}
+body{font-family:'Quicksand',sans-serif;background:#FAF5EE;color:#3D3530;line-height:1.75;min-height:100vh;}
+button{cursor:pointer;font-family:'Quicksand',sans-serif;}
+a{color:inherit;text-decoration:none;}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#7a4e3c,#C4856A,#a06852);padding:52px 24px 40px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 30% 120%,rgba(242,212,200,.18) 0%,transparent 60%);}
+.hero-inner{position:relative;z-index:1;max-width:620px;margin:0 auto;}
+.logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;}
+.logo-mark{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text{font-family:'Lora',serif;font-size:17px;font-weight:600;color:white;letter-spacing:-.2px;}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:rgba(250,245,238,.92);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:30px;margin-bottom:20px;}
+.hero h1{font-family:'Lora',serif;font-size:clamp(30px,6vw,52px);color:white;line-height:1.12;margin-bottom:14px;}
+.hero h1 em{font-style:italic;color:#F2D4C8;}
+.hero-sub{font-size:clamp(14px,2vw,17px);color:rgba(250,245,238,.75);max-width:500px;margin:0 auto 28px;line-height:1.8;}
+.meta-pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;}
+.meta-pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(250,245,238,.88);font-size:11px;font-weight:700;padding:6px 16px;border-radius:30px;}
+
+/* SHELL */
+.quiz-shell{max-width:640px;margin:0 auto;padding:32px 20px 80px;}
+
+/* PROGRESS */
+.progress-wrap{margin-bottom:28px;}
+.progress-header{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:#9a8a7a;margin-bottom:8px;}
+.progress-track{height:8px;background:#F2D4C8;border-radius:4px;overflow:hidden;}
+.progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#F2D4C8,#C4856A);transition:width .5s cubic-bezier(.4,0,.2,1);}
+
+/* CARD */
+.quiz-card{background:white;border-radius:24px;padding:36px;border:1px solid #e8d8c8;box-shadow:0 6px 32px rgba(196,133,106,.1);animation:fadeUp .35s ease both;}
+@media(max-width:480px){.quiz-card{padding:24px 18px;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.q-num{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C4856A;margin-bottom:10px;}
+.q-icon{font-size:34px;margin-bottom:12px;}
+.q-text{font-family:'Lora',serif;font-size:clamp(17px,2.5vw,22px);font-weight:600;color:#3D3530;line-height:1.4;margin-bottom:6px;}
+.q-sub{font-size:13px;color:#9a8a7a;margin-bottom:24px;line-height:1.6;}
+.options{display:flex;flex-direction:column;gap:9px;}
+.opt{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:14px;border:2px solid #e8d8c8;background:#FAF5EE;cursor:pointer;transition:all .2s;font-size:14px;font-weight:600;color:#5e5048;text-align:left;width:100%;}
+.opt:hover{border-color:#C4856A;background:#F2D4C8;}
+.opt.selected{border-color:#C4856A;background:#F2D4C8;color:#7a4e3c;}
+.opt-dot{width:20px;height:20px;border-radius:50%;border:2px solid #e8d8c8;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;transition:all .2s;}
+.opt.selected .opt-dot{background:#C4856A;border-color:#C4856A;color:white;}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
+.back-btn{background:none;border:1.5px solid #e8d8c8;color:#9a8a7a;font-size:13px;font-weight:700;padding:10px 20px;border-radius:30px;}
+.next-btn{background:linear-gradient(135deg,#C4856A,#a06852);border:none;color:white;font-size:14px;font-weight:700;padding:12px 30px;border-radius:30px;opacity:.4;pointer-events:none;transition:all .2s;}
+.next-btn.on{opacity:1;pointer-events:all;}
+.next-btn.on:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(196,133,106,.35);}
+
+/* EMAIL GATE */
+.gate{background:white;border-radius:24px;padding:40px;border:1px solid #e8d8c8;text-align:center;animation:fadeUp .4s ease both;}
+@media(max-width:480px){.gate{padding:28px 18px;}}
+.gate-icon{font-size:48px;margin-bottom:14px;}
+.gate h2{font-family:'Lora',serif;font-size:clamp(20px,3vw,28px);color:#3D3530;margin-bottom:8px;}
+.gate h2 em{font-style:italic;color:#C4856A;}
+.gate-sub{font-size:14px;color:#5e5048;line-height:1.75;max-width:440px;margin:0 auto 24px;}
+.gate-pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:24px;}
+.gate-pill{background:#F2D4C8;border:1px solid #e8d8c8;font-size:11px;font-weight:700;color:#a06852;padding:4px 13px;border-radius:20px;}
+.gate-form{display:flex;flex-direction:column;gap:11px;max-width:360px;margin:0 auto;}
+.gate-input{font-family:'Quicksand',sans-serif;font-size:15px;border:1.5px solid #e8d8c8;border-radius:12px;padding:13px 16px;outline:none;background:#FAF5EE;color:#3D3530;transition:border-color .2s;}
+.gate-input:focus{border-color:#C4856A;background:white;}
+.gate-submit{font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;background:linear-gradient(135deg,#C4856A,#a06852);color:white;border:none;border-radius:50px;padding:15px;cursor:pointer;box-shadow:0 6px 20px rgba(196,133,106,.28);transition:all .2s;}
+.gate-submit:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(196,133,106,.38);}
+.gate-privacy{font-size:11px;color:#9a8a7a;margin-top:4px;}
+
+/* RESULTS */
+.results{animation:fadeUp .5s ease both;}
+.result-card{background:white;border-radius:24px;padding:40px;border:1px solid #e8d8c8;text-align:center;}
+@media(max-width:480px){.result-card{padding:28px 18px;}}
+.result-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 20px;border-radius:30px;margin-bottom:16px;}
+.score-ring{width:150px;height:150px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;border:8px solid #F2D4C8;margin:0 auto 24px;}
+.score-num{font-family:'Lora',serif;font-size:46px;font-weight:700;line-height:1;}
+.score-lbl{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-top:3px;color:#9a8a7a;}
+.result-title{font-family:'Lora',serif;font-size:clamp(20px,3vw,28px);color:#3D3530;margin-bottom:10px;line-height:1.3;}
+.result-title em{font-style:italic;color:#C4856A;}
+.result-desc{font-size:14px;color:#5e5048;line-height:1.8;max-width:500px;margin:0 auto 24px;}
+.minerals-box{background:#FAF5EE;border-radius:16px;padding:22px;margin:0 0 20px;text-align:left;}
+.minerals-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9a8a7a;margin-bottom:14px;}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.bar-row:last-child{margin-bottom:0;}
+.bar-label{font-size:12px;font-weight:700;color:#5e5048;width:76px;flex-shrink:0;}
+.bar-track{flex:1;height:10px;background:#F2D4C8;border-radius:5px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:5px;transition:width 1.2s cubic-bezier(.4,0,.2,1);width:0;}
+.bar-val{font-size:11px;font-weight:700;color:#9a8a7a;width:34px;text-align:right;}
+.seq-box{background:linear-gradient(135deg,#FAF5EE,#e8f2e7);border:1px solid #e8d8c8;border-radius:16px;padding:22px;margin:0 0 24px;text-align:left;}
+.seq-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9a8a7a;margin-bottom:14px;}
+.seq-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #e8d8c8;}
+.seq-row:last-child{border-bottom:none;}
+.seq-day{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C4856A;width:46px;flex-shrink:0;padding-top:2px;}
+.seq-body h4{font-size:13px;font-weight:700;color:#3D3530;margin-bottom:2px;}
+.seq-body p{font-size:12px;color:#9a8a7a;line-height:1.5;}
+.result-ctas{display:flex;flex-direction:column;gap:10px;max-width:380px;margin:0 auto;}
+.cta-primary{display:block;text-align:center;font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;color:white;background:linear-gradient(135deg,#C4856A,#a06852);padding:17px 28px;border-radius:50px;border:none;cursor:pointer;box-shadow:0 6px 24px rgba(196,133,106,.3);transition:all .2s;text-decoration:none;}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(196,133,106,.42);}
+.cta-secondary{display:block;text-align:center;font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;color:#C9A96E;background:white;border:1.5px solid #f5ead8;padding:14px 28px;border-radius:50px;cursor:pointer;transition:all .2s;text-decoration:none;}
+.cta-secondary:hover{background:#f5ead8;}
+.cta-ghost{background:none;border:1.5px solid #e8d8c8;color:#9a8a7a;font-family:'Quicksand',sans-serif;font-size:13px;font-weight:700;padding:11px 22px;border-radius:30px;cursor:pointer;transition:all .2s;}
+.cta-ghost:hover{border-color:#C4856A;color:#C4856A;}
+.result-note{font-size:11px;color:#9a8a7a;margin-top:16px;line-height:1.65;}
+
+/* FOOTER */
+.footer{background:#3D3530;padding:28px 20px;text-align:center;}
+.footer p{font-size:12px;color:rgba(250,245,238,.35);line-height:1.7;}
+.footer a{color:rgba(250,245,238,.5);text-decoration:underline;}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="logo">
+      <div class="logo-mark">🌸</div>
+      <div class="logo-text">Mineral Maven</div>
+    </div>
+    <div class="eyebrow">Free Mineral Depletion Quiz</div>
+    <h1>Are You Mineral<br><em>Depleted?</em></h1>
+    <p class="hero-sub">Answer 8 questions and get your personalised mineral depletion score — plus a free email recovery series — instantly.</p>
+    <div class="meta-pills">
+      <span class="meta-pill">⏱ 2 minutes</span>
+      <span class="meta-pill">🔬 8 questions</span>
+      <span class="meta-pill">📧 Free results</span>
+      <span class="meta-pill">✦ No cost, ever</span>
+    </div>
+  </div>
+</section>
+
+<div class="quiz-shell">
+
+  <!-- PROGRESS -->
+  <div id="progressWrap" style="padding-top:24px;">
+    <div class="progress-wrap">
+      <div class="progress-header">
+        <span id="progressLabel">Question 1 of 8</span>
+        <span id="progressPct">0% complete</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%;"></div></div>
+    </div>
+  </div>
+
+  <!-- QUESTIONS -->
+  <div id="questions">
+    <div class="quiz-card" id="q1">
+      <div class="q-num">Question 1 of 8</div>
+      <div class="q-icon">😴</div>
+      <div class="q-text">How would you describe your energy levels right now?</div>
+      <div class="q-sub">Think about your typical day — not your best or worst.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>I feel great — energy is solid most of the day</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>Mild afternoon dips, but generally okay</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Tired most of the day, even after sleep</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Bone-tired almost constantly — running on empty</button>
+      </div>
+      <div class="nav"><span></span><button class="next-btn" id="n1" onclick="nextQ(1)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q2" style="display:none;">
+      <div class="q-num">Question 2 of 8</div>
+      <div class="q-icon">🦱</div>
+      <div class="q-text">Have you noticed changes in your hair since giving birth?</div>
+      <div class="q-sub">Postpartum hair shedding is a clear sign of mineral depletion.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>No noticeable change</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>A little more shedding than usual</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Significant shedding — noticeable in the shower and on pillows</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Severe loss — visible thinning or bald patches</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(2)">← Back</button><button class="next-btn" id="n2" onclick="nextQ(2)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q3" style="display:none;">
+      <div class="q-num">Question 3 of 8</div>
+      <div class="q-icon">😟</div>
+      <div class="q-text">How has your mood and anxiety been since birth?</div>
+      <div class="q-sub">Mineral imbalances directly affect mood regulation.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>Mood is stable — I feel emotionally grounded</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>Some mood swings, but manageable</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Noticeable anxiety or irritability most days</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Significant anxiety, tearfulness, or feeling overwhelmed regularly</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(3)">← Back</button><button class="next-btn" id="n3" onclick="nextQ(3)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q4" style="display:none;">
+      <div class="q-num">Question 4 of 8</div>
+      <div class="q-icon">🧠</div>
+      <div class="q-text">Are you experiencing brain fog or difficulty concentrating?</div>
+      <div class="q-sub">DHA, choline, iron, and iodine all play key roles postpartum.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>No — my thinking is clear and focused</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>Occasionally forget things or lose my train of thought</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Regular brain fog — hard to concentrate</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Severe — I can barely form sentences some days</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(4)">← Back</button><button class="next-btn" id="n4" onclick="nextQ(4)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q5" style="display:none;">
+      <div class="q-num">Question 5 of 8</div>
+      <div class="q-icon">🍼</div>
+      <div class="q-text">Are you breastfeeding, and how is your supply?</div>
+      <div class="q-sub">Breastfeeding significantly increases your mineral needs.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>Not breastfeeding</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>Breastfeeding with a strong, consistent supply</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Breastfeeding but noticing supply dips</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Struggling significantly with supply</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(5)">← Back</button><button class="next-btn" id="n5" onclick="nextQ(5)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q6" style="display:none;">
+      <div class="q-num">Question 6 of 8</div>
+      <div class="q-icon">🩺</div>
+      <div class="q-text">Have you experienced physical symptoms since giving birth?</div>
+      <div class="q-sub">Select the option that best describes your experience.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>None — I feel physically well</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>Occasional muscle cramps, headaches, or poor sleep</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Regular muscle cramps, joint pain, or disrupted sleep</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Multiple symptoms daily</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(6)">← Back</button><button class="next-btn" id="n6" onclick="nextQ(6)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q7" style="display:none;">
+      <div class="q-num">Question 7 of 8</div>
+      <div class="q-icon">🥗</div>
+      <div class="q-text">How would you describe your diet postpartum?</div>
+      <div class="q-sub">Diet quality impacts your mineral replenishment capacity.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>Mostly whole foods — plenty of variety</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>Pretty good, but I skip meals sometimes</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>Inconsistent — some good days, some survival days</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>Mostly convenience food — no time or energy to cook</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(7)">← Back</button><button class="next-btn" id="n7" onclick="nextQ(7)">Next →</button></div>
+    </div>
+
+    <div class="quiz-card" id="q8" style="display:none;">
+      <div class="q-num">Question 8 of 8</div>
+      <div class="q-icon">📅</div>
+      <div class="q-text">How many months postpartum are you?</div>
+      <div class="q-sub">This helps us personalise your results.</div>
+      <div class="options">
+        <button class="opt" onclick="pick(this,0)"><span class="opt-dot"></span>Pregnant or less than 6 weeks postpartum</button>
+        <button class="opt" onclick="pick(this,1)"><span class="opt-dot"></span>6 weeks to 6 months postpartum</button>
+        <button class="opt" onclick="pick(this,2)"><span class="opt-dot"></span>6 months to 18 months postpartum</button>
+        <button class="opt" onclick="pick(this,3)"><span class="opt-dot"></span>18 months or more postpartum</button>
+      </div>
+      <div class="nav"><button class="back-btn" onclick="prevQ(8)">← Back</button><button class="next-btn" id="n8" onclick="showGate()">See My Results →</button></div>
+    </div>
+  </div>
+
+  <!-- EMAIL GATE -->
+  <div id="gate" style="display:none;">
+    <div class="gate">
+      <div class="gate-icon">📬</div>
+      <h2>Your results are <em>ready!</em></h2>
+      <p class="gate-sub">Enter your name and email to receive your personalised mineral depletion score — plus a free 5-part email recovery series.</p>
+      <div class="gate-pills">
+        <span class="gate-pill">📊 Your Depletion Score</span>
+        <span class="gate-pill">🔬 Key Minerals to Address</span>
+        <span class="gate-pill">🥗 Where to Start</span>
+        <span class="gate-pill">📧 5-Part Recovery Series</span>
+      </div>
+      <div class="gate-form">
+        <input class="gate-input" id="fname" type="text" placeholder="Your first name">
+        <input class="gate-input" id="femail" type="email" placeholder="Your best email address">
+        <button class="gate-submit" onclick="submit()">Show Me My Results →</button>
+        <p class="gate-privacy">🔒 No spam, ever. Unsubscribe any time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results" style="display:none;">
+    <div class="results">
+      <div class="result-card">
+        <div id="rBadge" class="result-badge"></div>
+        <div class="score-ring"><div class="score-num" id="rScore">-</div><div class="score-lbl">/ 100</div></div>
+        <h2 class="result-title" id="rTitle"></h2>
+        <p class="result-desc" id="rDesc"></p>
+        <div class="minerals-box">
+          <div class="minerals-title">Your likely mineral priorities</div>
+          <div id="rBars"></div>
+        </div>
+        <div class="seq-box">
+          <div class="seq-title">Your free email recovery series — what's coming</div>
+          <div id="rSeq"></div>
+        </div>
+        <p style="font-size:13px;color:#9a8a7a;margin-bottom:20px;">Check your inbox — your full results and Email 1 are on their way! 🌸</p>
+        <div class="result-ctas">
+          <a href="https://l.bttr.to/OkVGf" target="_blank" class="cta-primary">✦ Join The Nourish Mama Method →</a>
+          <a href="https://l.bttr.to/73Zh5" target="_blank" class="cta-secondary">📞 Book a Free Consultation</a>
+          <button class="cta-ghost" onclick="reset()">Retake Quiz</button>
+        </div>
+        <p class="result-note">Nutritional and wellness education only — not medical advice, diagnosis, or treatment.<br>Always consult your healthcare provider before making changes to your diet or supplement regimen.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <p>© 2025 Mineral Maven · Jenifer Allen · <a href="https://instagram.com/mineralmaven_" target="_blank">@mineralmaven_</a> · hello@mineralmaven.com<br>Nutritional and wellness coaching only — not medical advice, diagnosis, or treatment.</p>
+</footer>
+
+<script>
+var answers = [null,null,null,null,null,null,null,null];
+var TOTAL = 8;
+
+function updateProgress(q) {
+  var pct = Math.round(((q - 1) / TOTAL) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = 'Question ' + q + ' of ' + TOTAL;
+  document.getElementById('progressPct').textContent = pct + '% complete';
+}
+
+function pick(btn, score) {
+  var card = btn.closest('.quiz-card');
+  card.querySelectorAll('.opt').forEach(function(o) {
+    o.classList.remove('selected');
+    o.querySelector('.opt-dot').textContent = '';
+  });
+  btn.classList.add('selected');
+  btn.querySelector('.opt-dot').textContent = '✓';
+  answers[parseInt(card.id.replace('q','')) - 1] = score;
+  card.querySelector('.next-btn').classList.add('on');
+}
+
+function showQ(n) {
+  document.querySelectorAll('.quiz-card').forEach(function(c) { c.style.display = 'none'; });
+  var card = document.getElementById('q' + n);
+  if (card) { card.style.display = 'block'; }
+  updateProgress(n);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function nextQ(n) {
+  if (answers[n - 1] === null) return;
+  if (n < TOTAL) showQ(n + 1);
+}
+
+function prevQ(n) {
+  if (n > 1) showQ(n - 1);
+}
+
+function showGate() {
+  if (answers[TOTAL - 1] === null) return;
+  document.getElementById('questions').style.display = 'none';
+  document.getElementById('progressWrap').style.display = 'none';
+  document.getElementById('gate').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function calcScore() {
+  var w = [1.2,1.1,1.2,1.0,0.8,1.0,0.9,0.6];
+  var raw = 0, max = 0;
+  answers.forEach(function(a, i) {
+    var wt = w[i] || 1;
+    raw += (a || 0) * wt;
+    max += 3 * wt;
+  });
+  return Math.round((raw / max) * 100);
+}
+
+function getResult(score) {
+  if (score <= 20) return {
+    badge: '🌿 Minimal Depletion', badgeBg: '#e8f2e7', badgeColor: '#5d8c5a', ringColor: '#8FAF8C',
+    title: 'You are in <em>pretty good shape</em> — for now.',
+    desc: 'Your symptoms suggest minimal mineral depletion. Your email series will focus on preventive strategies to keep you feeling your best.',
+    minerals: [{n:'Iron',v:88},{n:'Zinc',v:82},{n:'Magnesium',v:85},{n:'Iodine',v:79},{n:'Selenium',v:80}],
+    barColor: 'linear-gradient(90deg,#e8f2e7,#8FAF8C)',
+    seq: [{day:'Day 1',subj:'Your Mineral Score',body:'Your score and the 3 easiest wins to maintain great mineral health.'},{day:'Day 4',subj:'Top 5 Minerals Every Postpartum Mama Needs',body:'How to get them from food first.'},{day:'Day 9',subj:'Is HTMA Right for You?',body:'When testing is worth it and what it would reveal.'}]
+  };
+  if (score <= 45) return {
+    badge: '🌸 Mild Depletion', badgeBg: '#F2D4C8', badgeColor: '#C4856A', ringColor: '#C4856A',
+    title: 'Mild depletion — your body is <em>sending signals.</em>',
+    desc: 'Your results indicate mild but real mineral depletion. This stage responds well to targeted dietary changes and foundational supplementation.',
+    minerals: [{n:'Iron',v:58},{n:'Zinc',v:52},{n:'Magnesium',v:61},{n:'Iodine',v:55},{n:'Selenium',v:64}],
+    barColor: 'linear-gradient(90deg,#F2D4C8,#C4856A)',
+    seq: [{day:'Day 1',subj:'Your Mild Depletion Score',body:'What your score means and the single best thing to do today.'},{day:'Day 4',subj:'Top 5 Mineral-Rich Foods to Eat This Week',body:'Specific food swaps to start rebuilding immediately.'},{day:'Day 9',subj:'Is It Time for HTMA?',body:'Why guessing can make things worse — and how HTMA gives you precision instead.'}]
+  };
+  if (score <= 70) return {
+    badge: '⚠️ Moderate Depletion', badgeBg: '#f5ead8', badgeColor: '#C9A96E', ringColor: '#C9A96E',
+    title: 'Moderate depletion — you need <em>more than rest.</em>',
+    desc: 'Your score suggests significant mineral depletion driving your symptoms. This level responds well to a targeted, data-driven approach.',
+    minerals: [{n:'Iron',v:32},{n:'Zinc',v:28},{n:'Magnesium',v:38},{n:'Iodine',v:30},{n:'Selenium',v:35}],
+    barColor: 'linear-gradient(90deg,#f5ead8,#C9A96E)',
+    seq: [{day:'Day 1',subj:'Your Results: Moderate Depletion',body:'What to do in the next 48 hours.'},{day:'Day 3',subj:'Your Immediate Mineral Recovery Food Plan',body:'A full day of eating designed for your symptom profile.'},{day:'Day 8',subj:'The Nourish Mama Method',body:'What your 16-week recovery could look like with HTMA-guided support.'}]
+  };
+  return {
+    badge: '🔴 Significant Depletion', badgeBg: '#F2D4C8', badgeColor: '#C4856A', ringColor: '#C4856A',
+    title: 'Significant depletion — your body is <em>deeply depleted.</em>',
+    desc: 'What you are experiencing is not weakness — it is a very real physiological state. You deserve a precise, personalised plan built around your specific mineral picture.',
+    minerals: [{n:'Iron',v:14},{n:'Zinc',v:11},{n:'Magnesium',v:18},{n:'Iodine',v:12},{n:'Selenium',v:16}],
+    barColor: 'linear-gradient(90deg,#F2D4C8,#C4856A)',
+    seq: [{day:'Day 1',subj:'Your Results: Significant Depletion',body:'You are not broken. You are depleted. Your most urgent first steps.'},{day:'Day 3',subj:'Emergency Mineral Food Protocol — Start Today',body:'Simple, nourishing meals specifically chosen for your symptom profile.'},{day:'Day 7',subj:'The Nourish Mama Method',body:'At this level of depletion, HTMA ends the guesswork for good.'}]
+  };
+}
+
+function submit() {
+  var name = document.getElementById('fname').value.trim();
+  var email = document.getElementById('femail').value.trim();
+  if (!name || !email || email.indexOf('@') < 0) {
+    alert('Please enter your name and a valid email address.');
+    return;
+  }
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('results').style.display = 'block';
+
+  var score = calcScore();
+  var res = getResult(score);
+
+  document.getElementById('rScore').textContent = score;
+  document.getElementById('rScore').style.color = res.ringColor;
+  document.querySelector('.score-ring').style.borderColor = res.badgeBg;
+
+  var badge = document.getElementById('rBadge');
+  badge.textContent = res.badge;
+  badge.style.background = res.badgeBg;
+  badge.style.color = res.badgeColor;
+
+  document.getElementById('rTitle').innerHTML = res.title;
+  document.getElementById('rDesc').textContent = res.desc;
+
+  var barsEl = document.getElementById('rBars');
+  barsEl.innerHTML = '';
+  res.minerals.forEach(function(m) {
+    var row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML = '<div class="bar-label">' + m.n + '</div><div class="bar-track"><div class="bar-fill" data-target="' + m.v + '" style="background:' + res.barColor + ';width:0%;"></div></div><div class="bar-val">' + m.v + '%</div>';
+    barsEl.appendChild(row);
+  });
+  setTimeout(function() {
+    barsEl.querySelectorAll('.bar-fill').forEach(function(b) {
+      b.style.width = b.getAttribute('data-target') + '%';
+    });
+  }, 300);
+
+  var seqEl = document.getElementById('rSeq');
+  seqEl.innerHTML = '';
+  res.seq.forEach(function(e) {
+    var row = document.createElement('div');
+    row.className = 'seq-row';
+    row.innerHTML = '<div class="seq-day">' + e.day + '</div><div class="seq-body"><h4>' + e.subj + '</h4><p>' + e.body + '</p></div>';
+    seqEl.appendChild(row);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function reset() {
+  answers = [null,null,null,null,null,null,null,null];
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('questions').style.display = 'block';
+  document.getElementById('progressWrap').style.display = 'block';
+  document.querySelectorAll('.opt').forEach(function(o) {
+    o.classList.remove('selected');
+    o.querySelector('.opt-dot').textContent = '';
+  });
+  document.querySelectorAll('.next-btn').forEach(function(b) { b.classList.remove('on'); });
+  showQ(1);
+}
+
+updateProgress(1);
+</script>
+</body>
+</html>
